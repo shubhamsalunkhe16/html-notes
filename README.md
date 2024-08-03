@@ -1,6 +1,6 @@
 ## Introduction
 
-##### What is HTML ?
+### What is HTML ?
 
 - HTML is the standard markup language for creating Web pages.
 
@@ -12,7 +12,7 @@
 
 <br/>
 
-##### HTML Page Structure
+### HTML Page Structure
 
 ![html_structure](./images/html_structure.png)
 
@@ -40,7 +40,7 @@
 
 <br />
 
-##### How HTML elements should be displayed ?
+### How HTML elements should be displayed ?
 
 - CSS is a language that describes the **style of an HTML documen**t.
 - CSS describes **how HTML elements should be displayed**.
@@ -53,7 +53,7 @@
 
 <br/>
 
-##### Makes HTML pages more dynamic and interactive by JavaScript
+### Makes HTML pages more dynamic and interactive by JavaScript
 
 - The `<script>` tag is used to **define a client-side script** (JavaScript).
 
@@ -65,7 +65,7 @@
 
 ## Elements
 
-##### HTML Elements
+### HTML Elements
 
 - usually consists of a **start tag and end tag, with the content** inserted in between.
 
@@ -75,7 +75,7 @@
 
 ## <br />
 
-##### Do Not Forget the End TagDo Not Forget the End Tag
+### Do Not Forget the End TagDo Not Forget the End Tag
 
 - Some HTML elements will display correctly, even if you forget the end tag：
 
@@ -92,7 +92,7 @@
 
 ## <br />
 
-##### Empty HTML Elements
+### Empty HTML Elements
 
 - HTML **elements with no content** are called empty elements.
 
@@ -102,7 +102,7 @@
 
 ## <br />
 
-##### Use Lowercase Tags
+### Use Lowercase Tags
 
 - HTML tags are **not case sensitive**：`<P>` means the same as `<p>`.
 
@@ -112,7 +112,7 @@
 
 ## Attributes
 
-##### HTML Attributes
+### HTML Attributes
 
 - Attributes provide **additional information** about an element.
 
@@ -130,11 +130,11 @@
 
 <br />
 
-#### Core Attributes
+### Core Attributes
 
 - 4 core attributes are `id`,`class`,`title`,`style`
 
-##### The Id Attribute
+### The Id Attribute
 
 - used to specify a `unique id` for an HTML element
 - used by `CSS` and `JavaScript` to `select and access` specific elements
@@ -144,7 +144,7 @@
 <p id="html">This para explains what is HTML</p>
 ```
 
-##### The class Attribute
+### The class Attribute
 
 - specifies `one or more` class names for an element
 - used by `CSS` and `JavaScript` to `select and access` specific elements
@@ -159,7 +159,7 @@
 <p class="sub-heading">This para explains what is HTML</p>
 ```
 
-##### The title Attribute
+### The title Attribute
 
 - displayed as a `tooltip` when cursor comes over the element or while the element is loading
 
@@ -167,7 +167,7 @@
 <h3 title="Hello HTML!">Titled Heading Tag Example</h3>
 ```
 
-##### The Style Attribute
+### The Style Attribute
 
 - used to `add styles` to an element
 
@@ -187,7 +187,7 @@
 <p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
-##### _wrong way_
+### _wrong way_
 
 ```html
 <p>My cat is <strong>very grumpy.</p></strong>
@@ -195,7 +195,7 @@
 
 ## Marking up text
 
-##### Headings `<h1> - <h6>`
+### Headings `<h1> - <h6>`
 
 - `defines` the most important `headings and subheadings`
 - contains `6` heading levels, `<h1> - <h6>`
@@ -207,7 +207,7 @@
 <h4>My sub-subheading</h4>
 ```
 
-##### _output :_
+### _output :_
 
 <h1>My main title</h1>
 <h2>My top level heading</h2>
@@ -558,7 +558,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 - #### _output :_
   <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
 
-#### target attribute
+### target attribute
 
 - specifies `where to open the linked document`
 - can have one of the following values:
@@ -568,7 +568,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   - `_parent` - Opens the document in the `parent frame`
   - `_top` - Opens the document in the `full body of the window`
 
-#### By default, links will appear as follows in all browsers
+### By default, links will appear as follows in all browsers
 
 - `unvisited link` => underlined and blue
 - `visited link` => underlined and purple
@@ -605,7 +605,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </style>
 ```
 
-#### Create a Bookmark in HTML
+### Create a Bookmark in HTML
 
 - can `jump to specific parts` of a web page
 - use the `id` attribute (id="value") to define bookmarks in a page
@@ -631,7 +631,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   - `screen readers read out` the alt text
   - `on image loading error`, alt text displays
 
-#### Image Maps
+### Image Maps
 
 - An image map is an `image with clickable areas`
 - The areas are defined with one or more `<area>` tags.
@@ -661,7 +661,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </script>
 ```
 
-#### HTML `<picture>` Element
+### HTML `<picture>` Element
 
 - allows to display `different pictures for different devices or screen sizes`.
 
@@ -677,7 +677,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 - Always specify an `<img>` element as the `last child` element of the `<picture>` element for `fallback`.
 
-#### HTML Favicon
+### HTML Favicon
 
 ```html
 <head>
@@ -690,7 +690,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 ## Lists `<ol>/<ul>/<dl>`
 
-#### Ordered lists `<ol>`
+### Ordered lists `<ol>`
 
 - An ordered list can be numerical or alphabetical
 - `type attribute` defines the type of the list item marker
@@ -706,7 +706,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </ol>
 ```
 
-#### _output :_
+### _output :_
 
 <ol type="1" start="5">
   <li>Coffee</li>
@@ -714,7 +714,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <li>Milk</li>
 </ol>
 
-#### Unordered lists `<ul>`
+### Unordered lists `<ul>`
 
 - List items will be `marked with bullets`
 - `type attribute` defines the type of the list item marker
@@ -728,7 +728,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </ul>
 ```
 
-#### _output :_
+### _output :_
 
 <ul type="square">
   <li>technologists</li>
@@ -736,7 +736,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <li>builders</li>
 </ul>
 
-#### Description list `<dl>`
+### Description list `<dl>`
 
 - list of terms`<dt>`, with a description`<dd>` of each term.
 
@@ -749,7 +749,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </dl>
 ```
 
-#### _output :_
+### _output :_
 
 <dl>
   <dt>Coffee</dt>
@@ -854,35 +854,35 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 - used to `collect user input`
 
-#### `type="text"`
+### `type="text"`
 
 - defines a `single-line text input` field
 
-#### `type="email"`
+### `type="email"`
 
 - used for input fields that should contain an e-mail address
 
-#### `type="password"`
+### `type="password"`
 
 - defines a `password field`
 
-#### `type="hidden"`
+### `type="hidden"`
 
 - defines a `hidden input field` (not visible to a user)
 
 - lets web developers `include data that cannot be seen or modified by users` when a form is submitted
 
-#### `type="number"`
+### `type="number"`
 
 - defines a `numeric input field`
 
-#### `type="submit"`
+### `type="submit"`
 
 - defines a button for `submitting form data to a form-handler`
 - `form-handler` is typically a `server page with a script for processing input data`
 - `form-handler` is specified in the `form's action` attribute
 
-#### `type="reset"`
+### `type="reset"`
 
 - will `reset all form values` to their default values
 
@@ -932,7 +932,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 - `<fieldset>` tag draws a box around the related elements
 - `<legend>` tag is used to define a caption for the `<fieldset>` element.
 
-#### `type="radio"`
+### `type="radio"`
 
 - defines a `radio button`
 - user will select `ONLY ONE` of a limited number of choices
@@ -962,7 +962,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <label for="javascript">JavaScript</label>
 </form>
 
-#### `type="checkbox"`
+### `type="checkbox"`
 
 - user select `ZERO or MORE options` of a limited number of choices
 
@@ -986,7 +986,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <label for="vehicle3"> I have a boat</label>
 </form>
 
-#### `type="file"`
+### `type="file"`
 
 - defines a `file-select field` and a "Browse" button for `file uploads`.
 
@@ -1002,7 +1002,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="file" id="myfile" name="myfile">
 </form>
 
-#### `type="range"`
+### `type="range"`
 
 - control for entering a number whose exact value is not important (like a `slider control`)
 
@@ -1018,7 +1018,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="range" id="vol" name="vol" min="0" max="50">
 </form>
 
-#### `type="search"`
+### `type="search"`
 
 - used for `search fields`
 
@@ -1034,7 +1034,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="search" id="gsearch" name="gsearch">
 </form>
 
-#### `type="tel"`
+### `type="tel"`
 
 - used for input fields that should contain a `telephone number`
 
@@ -1055,7 +1055,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
 </form>
 
-#### `type="date"`
+### `type="date"`
 
 - used for input fields that should contain a `date`.
 
@@ -1071,7 +1071,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="date" id="birthday" name="birthday">
 </form>
 
-#### `type="time"`
+### `type="time"`
 
 - used for input fields that should contain a `time`.
 
@@ -1087,7 +1087,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="time" id="appt" name="appt">
 </form>
 
-#### `type="button"`
+### `type="button"`
 
 - defines a `button`
 
@@ -1097,7 +1097,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 <input type="button" onclick="alert('Hello World!')" value="Click Me!">
 
-#### `type="color"`
+### `type="color"`
 
 - used to `select color`
 
@@ -1113,7 +1113,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="color" id="favcolor" name="favcolor">
 </form>
 
-#### `type="image"`
+### `type="image"`
 
 - defines an `image as a submit button`
 
@@ -1133,7 +1133,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 <input type="image" src="./images/greenArrow.png" alt="Submit" width="48" height="48">
 </form>
 
-#### `type="url"`
+### `type="url"`
 
 - used for input fields that should contain a `URL address`
 
@@ -1187,15 +1187,15 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 ## HTML Input Attributes
 
-#### `The value Attribute`
+### `The value Attribute`
 
 - specifies a `value for an input field`
 
-#### `The readonly Attribute`
+### `The readonly Attribute`
 
 - specifies that an input field is read-only( `cannot be modified` )
 
-#### `The disabled Attribute`
+### `The disabled Attribute`
 
 - specifies that an input field should be `disabled`
 - it is `unusable` and `un-clickable`
@@ -1216,22 +1216,22 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="text" id="lname" name="lname" value="Doe" disabled /><br/><br/>
 </form>
 
-#### `The size Attribute`
+### `The size Attribute`
 
 - specifies the `visible width`, in characters, of an input field
 - The default value for size is `20`.
 - `Note`: works with : `text`, `search`, `tel`, `url`, `email`, and `password`.
 
-#### `The maxlength Attribute`
+### `The maxlength Attribute`
 
 - specifies the `maximum number of characters allowed` in an input field
 
-#### `The min and max Attributes`
+### `The min and max Attributes`
 
 - specify the `minimum and maximum values` for an input field
 - work with : `number`, `range`, `date`, `datetime-local`, `month`, `time` and `week`
 
-#### `The step Attribute`
+### `The step Attribute`
 
 - specifies the `legal number intervals` for an input field.
 - eg: if step="3", legal numbers could be -3, 0, 3, 6, etc.
@@ -1263,20 +1263,20 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 </form>
 
-#### `The autofocus Attribute`
+### `The autofocus Attribute`
 
 - specifies that an input field should `automatically get focus` when the page loads
 
-#### `The autocomplete Attribute`
+### `The autocomplete Attribute`
 
 - specifies whether a form or an `input field should have autocomplete on or off`
 
-#### `The required Attribute`
+### `The required Attribute`
 
 - specifies that an input field `must be filled out before submitting` the form
 - works with: `text`, `search`, `url`, `tel`, `email`, `password`, `date pickers`, `number`, `checkbox`, `radio`, and `file`
 
-#### `The placeholder Attribute`
+### `The placeholder Attribute`
 
 - specifies a `short hint` that describes the expected value of an input field
 
@@ -1307,7 +1307,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   /><br />
 </form>
 
-#### `The multiple Attribute`
+### `The multiple Attribute`
 
 - specifies that the user is `allowed to enter more than one value` in an input field
 - works with : `email`, and `file`
@@ -1324,7 +1324,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="file" id="files" name="files" multiple>
 </form>
 
-#### `The pattern Attribute`
+### `The pattern Attribute`
 
 - specifies a regular expression that the input field's value is checked against, when the form is submitted.
 - works with : `text`, `date`, `search`, `url`, `tel`, `email`, and `password`.
@@ -1344,11 +1344,11 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 ## HTML Input form Attributes
 
-#### `formaction Attribute`
+### `formaction Attribute`
 
 - formaction attribute specifies the `URL of the file that will process the input` when the form is submitted
 
-#### `The formenctype Attribute`
+### `The formenctype Attribute`
 
 - specifies how the `form-data should be encoded` when submitted (only for forms with `method="post"`).
 
@@ -1376,7 +1376,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   />
 </form>
 
-#### `formmethod Attribute`
+### `formmethod Attribute`
 
 - defines the `HTTP method` for sending form-data to the action URL
 - eg `method="get/post"`
@@ -1393,7 +1393,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 ## HTML Computer Code Elements
 
-#### `<kbd>`
+### `<kbd>`
 
 - used to define `keyboard input`
 
@@ -1401,11 +1401,11 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
 ```
 
-#### _output :_
+### _output :_
 
 <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
 
-#### `<samp>`
+### `<samp>`
 
 - used to define `sample output from a computer program`
 
@@ -1416,12 +1416,12 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </p>
 ```
 
-#### _output :_
+### _output :_
 
 <p>Message from my computer:</p>
 <p><samp>File not found.<br>Press F1 to continue</samp></p>
 
-#### `<code>`
+### `<code>`
 
 - used to define a piece of `computer code`
 
@@ -1429,7 +1429,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 <code> x = 5; y = 6; z = x + y; </code>
 ```
 
-#### _output :_
+### _output :_
 
 <code>
 x = 5;
@@ -1437,7 +1437,7 @@ y = 6;
 z = x + y;
 </code>
 
-#### `Notice`:
+### `Notice`:
 
 - `does not preserve extra whitespace and line-breaks`
 - `to fix`,
@@ -1449,7 +1449,7 @@ z = x + y;
 </code>
 </pre>
 
-#### HTML <var> For Variables
+### HTML <var> For Variables
 
 - used to define a `variable in programming` or in a `mathematical expression`
 - displayed in `italic`
@@ -1461,7 +1461,7 @@ z = x + y;
 </p>
 ```
 
-#### _output :_
+### _output :_
 
 <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
 
@@ -1501,7 +1501,7 @@ z = x + y;
 </details>
 ```
 
-#### _output:_
+### _output:_
 
 <details>
   <summary>Epcot Center</summary>
@@ -1523,7 +1523,7 @@ z = x + y;
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
 ```
 
-#### _output:_
+### _output:_
 
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
 
@@ -1554,7 +1554,7 @@ OR
 </p>
 ```
 
-#### _output:_
+### _output:_
 
 <p>I will display &#8364;</p>
 <p>I will display &#x20AC;</p>
@@ -1613,13 +1613,13 @@ OR
 </iframe>
 ```
 
-##### Global Attributes
+### Global Attributes
 
 - [The global attributes](http://www.w3schools.com/tags/ref_standardattributes.asp) can be used on **any** HTML element, such as `id`、`class` and `style`.
 
 <br />
 
-##### data-\* Attribute
+### data-\* Attribute
 
 - The `data-*` attributes is a **global attribute** used to store custom data private to the page or application.
 
@@ -1645,7 +1645,7 @@ OR
 
 ## Block and Inline Elements
 
-##### Block-level Elements
+### Block-level Elements
 
 - A block-level element **always starts on a new line**
 - and **takes up the full width available** (stretches out to the left and right as far as it can).
@@ -1659,7 +1659,7 @@ OR
 
 <br />
 
-##### Inline Elements
+### Inline Elements
 
 - **does not start on a new line**
 - and **only takes up as much width as necessary**
@@ -1702,7 +1702,7 @@ OR
 
 <br />
 
-##### Non-breaking Space
+### Non-breaking Space
 
 - Another common use of the **non-breaking space** is to prevent that **browsers truncate spaces** in HTML pages.
 
@@ -1724,7 +1724,7 @@ OR
 
 ## Uniform Resource Locators
 
-##### HTML URL
+### HTML URL
 
 - A URL is another word for a **web address**.
 
@@ -1756,7 +1756,7 @@ ain** - defines the I**nternet domain name\*\* (l- A web address, like http://ww
 
 ## HTML DOM
 
-##### What is HTML DOM ?
+### What is HTML DOM ?
 
 - When a web page is loaded, the browser creates a **Document Object Model** (_DOM_) of the page.
 
@@ -1796,7 +1796,7 @@ ain** - defines the I**nternet domain name\*\* (l- A web address, like http://ww
 
 <br />
 
-##### DOM Document
+### DOM Document
 
 - The document object **represents your web page**.
 
@@ -1823,7 +1823,7 @@ ain** - defines the I**nternet domain name\*\* (l- A web address, like http://ww
 
 <br />
 
-##### DOM Nodes
+### DOM Nodes
 
 - According to the W3C HTML DOM standard,**everything in an HTML document is a node**：
 
@@ -1839,7 +1839,7 @@ ain** - defines the I**nternet domain name\*\* (l- A web address, like http://ww
 
 <br />
 
-##### DOM Node Relationships
+### DOM Node Relationships
 
 - The nodes in the node tree have a **hierarchical relationship** to each other.
 
@@ -1876,7 +1876,7 @@ What is BOM ?
 
 <br />
 
-##### The Window Object
+### The Window Object
 
 - The window object is supported by all browsers. It **represents the browser's window.**
 
@@ -1894,31 +1894,31 @@ What is BOM ?
 
 <br />
 
-##### Window Screen Object
+### Window Screen Object
 
 ![window_screen](./images/window_screen.webp)
 
 <br />
 
-##### Window Location Object
+### Window Location Object
 
 ![window_location](./images/window_location.webp)
 
 <br />
 
-##### Window History Object
+### Window History Object
 
 ![window_history](./images/window_history.webp)
 
 <br />
 
-##### Window Navigator Object
+### Window Navigator Object
 
 ![window_navigator](./images/window_navigator.webp)
 
 <br />
 
-##### Popup Boxes
+### Popup Boxes
 
 - BOM has three kind of popup boxes：**Alert box, Confirm box, and Prompt box.**
 
@@ -1938,7 +1938,7 @@ What is BOM ?
 
 <br />
 
-##### Timing Events
+### Timing Events
 
 - The window object allows execution of code at **specified time intervals**.
 
@@ -1968,7 +1968,7 @@ What is BOM ?
 
 <br />
 
-##### Cookies
+### Cookies
 
 - Cookies let you **store user information** in web pages.
 
@@ -2005,7 +2005,7 @@ What is BOM ?
 
 <br />
 
-##### Web Storage
+### Web Storage
 
 - can **store data locally** within the user's browser.
 
@@ -2026,7 +2026,7 @@ What is BOM ?
 
 ## APIs
 
-##### Geolocation
+### Geolocation
 
 - used to get the `geographical position` of a user
 - Since this can compromise `privacy`, the position is not available unless the `user approves` it
@@ -2063,7 +2063,7 @@ What is BOM ?
 
 <br />
 
-##### Web Worker
+### Web Worker
 
 > When **executing scripts** in an HTML page, the page becomes **unresponsive until the script is finished**.
 
@@ -2079,7 +2079,7 @@ What is BOM ?
 
 ## Performance
 
-##### Delay JavaScript Loading
+### Delay JavaScript Loading
 
 - Putting your **scripts at the bottom of the page** body lets the **browser load the page first**.
 
@@ -2091,7 +2091,7 @@ What is BOM ?
 
 ## HTML Reference
 
-##### &lt;script&gt;
+### &lt;script&gt;
 
 - `async` attribute : script will be **fetched in parallel to html parsing** and **evaluated as soon as it is available** (potentially before parsing completes).
 
