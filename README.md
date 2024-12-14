@@ -1,14 +1,10 @@
-## Introduction
-
 ### What is HTML ?
 
-- HTML is the standard markup language for creating Web pages.
-
-  - HTML stands for **Hyper Text Markup Language**
-  - HTML describes the **structure of Web pages** using markup
-  - HTML elements are the **building blocks** of HTML pages
-  - HTML elements are **represented by tags**
-  - Browsers **do not display the HTML tags**, but **use them to render the content** of the page
+- stands for `Hyper Text Markup Language`.
+- describes the `structure of Web pages` using markup
+- `building blocks` of web pages.
+- `represented by tags`.
+- `use them to render the content` on the web page (audio, text, images, etc.)
 
 <br/>
 
@@ -20,44 +16,28 @@
 
 ## Comments
 
-    ```html
-    <!-- Write your comments here -->
-    ```
+```html
+<!-- Write your comments here -->
+```
 
-- Comments are **not displayed** by the browser, but they **can help document** your HTML source code.
-
-<br />
-
-**Conditional Comments**
-
-    ```html
-    <!--[if IE 9]>
-        .... some HTML here ....
-    <![endif]-->
-    ```
-
-- Conditional comments defines some HTML tags to be executed by Internet Explorer only.
+- `not displayed` by the browser.
+- `can help to document` source code.
 
 <br />
 
-### How HTML elements should be displayed ?
+### How HTML elements should be displayed/styled by CSS?
 
-- CSS is a language that describes the **style of an HTML documen**t.
-- CSS describes **how HTML elements should be displayed**.
-
-- CSS can be added to HTML elements in **3 ways**：
+- CSS can be added to HTML elements in `3 ways`：
 
 ![add_css](./images/add_css.webp)
 
-- The most **common way** to add CSS, is to keep the styles in **separate CSS files.**
+- Recommanded to `keep css in separate files`.
 
 <br/>
 
 ### Makes HTML pages more dynamic and interactive by JavaScript
 
-- The `<script>` tag is used to **define a client-side script** (JavaScript).
-
-- The `<script>` element either **contains scripting statements,** or it points to an **external script file through the src attribute**.
+- JS can be added to HTML elements in `3 ways`：
 
 ![add_js](./images/add_js.png)
 
@@ -67,17 +47,15 @@
 
 ### HTML Elements
 
-- usually consists of a **start tag and end tag, with the content** inserted in between.
-
-- The **HTML element** is everything from the **start tag to the end tag**.
+- usually consists of a `start tag` and `end tag`, with the `content` inserted in between.
 
 ![html_tag_breakdown](./images/html_tag_breakdown.png)
 
-## <br />
+<br />
 
-### Do Not Forget the End TagDo Not Forget the End Tag
+#### Do Not Forget the End TagDo Not Forget the End Tag
 
-- Some HTML elements will display correctly, even if you forget the end tag：
+- Some HTML elements `will display correctly, even if you forget the end tag`：
 
   ```html
   <html>
@@ -90,23 +68,19 @@
 
 > Never rely on this. It might produce unexpected results and/or errors if you forget the end tag.
 
-## <br />
+<br />
 
 ### Empty HTML Elements
 
-- HTML **elements with no content** are called empty elements.
+- `elements with no content, so no closing tag`
+- Empty elements `can be closed in the opening tag` like this：`<br />`.
 
-- `<br>` is an empty element without a closing tag (the `<br>` tag defines a line break).
-
-- Empty elements **can be "closed" in the opening tag** like this：`<br />`.
-
-## <br />
+<br />
 
 ### Use Lowercase Tags
 
-- HTML tags are **not case sensitive**：`<P>` means the same as `<p>`.
-
-- The HTML5 standard does not require lowercase tags, but W3C **recommends lowercase** in HTML, and demands lowercase for stricter document types like XHTML.
+- `not case sensitive`：`<P>` means the same as `<p>`.
+- `recommends lowercase.`
 
 <br />
 
@@ -114,31 +88,28 @@
 
 ### HTML Attributes
 
-- Attributes provide **additional information** about an element.
-
-- Attributes are **always specified in the start tag**.
-
-- Attributes usually come in **name/value pairs** like：name="value".
+- provide `additional information` about an element.
+- `always specified in the start tag`.
+- `name/value pairs` like：name="value".
 
 <br />
 
-**Use Lowercase Attributes**
+`Use Lowercase Attributes`
 
-- attributes are not case sensitive
-
-- W3C **recommends lowercase** in HTML, and demands lowercase for stricter document types like XHTML.
+- `not case sensitive`
+- `recommends lowercase`
 
 <br />
 
-### Core Attributes
+### Core/Global Attributes
 
-- 4 core attributes are `id`,`class`,`title`,`style`
+- 4 core attributes are `id`,`class`,`title`,`style`,`data-*`
 
 ### The Id Attribute
 
 - used to specify a `unique id` for an HTML element
 - used by `CSS` and `JavaScript` to `select and access` specific elements
-- case sensitive
+- `case sensitive`
 
 ```html
 <p id="html">This para explains what is HTML</p>
@@ -161,7 +132,7 @@
 
 ### The title Attribute
 
-- displayed as a `tooltip` when cursor comes over the element or while the element is loading
+- displayed as a `tooltip` when cursor comes over.
 
 ```html
 <h3 title="Hello HTML!">Titled Heading Tag Example</h3>
@@ -179,6 +150,26 @@
 </body>
 ```
 
+### data-\* Attribute
+
+- used to `store custom data` private to the page or application.
+- The stored data can then be used in the page's `CSS` or `JavaScript` to create a more engaging user experience.
+
+- The `data-*` attributes consist of two parts：
+  1. The attribute name should not contain any `uppercase letters`, and must be at `least one character` long after the prefix "data-".
+  2. The attribute value `can be any string`.
+
+```html
+<div id="mydiv" data-myval="10"></div>
+<p
+  onclick="showDetails(this)"
+  data-director-name="Christopher Nolan"
+  data-released-year="2010"
+>
+  Inception
+</p>
+```
+
 ## Nesting elements
 
 - `elements can contain other elements`
@@ -187,7 +178,7 @@
 <p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
-### _wrong way_
+#### wrong way
 
 ```html
 <p>My cat is <strong>very grumpy.</p></strong>
@@ -205,6 +196,8 @@
 <h2>My top level heading</h2>
 <h3>My subheading</h3>
 <h4>My sub-subheading</h4>
+<h5>My sub-subheading</h5>
+<h6>My sub-subheading</h6>
 ```
 
 ### _output :_
@@ -213,6 +206,8 @@
 <h2>My top level heading</h2>
 <h3>My subheading</h3>
 <h4>My sub-subheading</h4>
+<h5>My sub-subheading</h5>
+<h6>My sub-subheading</h6>
 
 `Note:`
 
@@ -222,7 +217,7 @@
 ## Paragraphs `<p>`
 
 - `regular text content`
-- cannot change the display by adding extra spaces or extra lines as `browser will automatically remove extra spaces`
+- `browser will automatically remove extra spaces in content`
 
 ```html
 <p>This is a single paragraph</p>
@@ -305,7 +300,7 @@
 ## `<strong>`
 
 - defines text with `strong importance`
-- displayed in bold text
+- displayed in `bold text`
 
 ```html
 <strong>This text is important!</strong>
@@ -350,7 +345,7 @@
 
 ## `<mark>`
 
-- defines text that should be `marked or highlighted`
+- defines `marked or highlighted` text
 
 ```html
 <span>Do not forget to buy <mark>milk</mark> today.</span>
@@ -541,22 +536,24 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 - can click on a link and `jump to another document`
 - `cursor` will be `pointer`
 
-- `Note:` A link does not have to be text. A link can be an image or any other HTML element!
-
-- Use the `mailto:` scheme inside the `href attribute` to create a `link that opens the user's email` program
+- `Note:` A link does not have to be text. A `link can be an image or any other HTML element!`
 
 ```html
+<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+
 <a href="default.asp">
   <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;" />
 </a>
 
+<!-- How to link to an email address: -->
 <a href="mailto:someone@example.com">Send email</a>
 
-<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
-```
+<!-- How to link to a phone number: -->
+<a href="tel:+4733378901">+47 333 78 901</a>
 
-- #### _output :_
-  <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+<!-- How to link to another section on the same page: -->
+<a href="#section2">Go to Section 2</a>
+```
 
 ### target attribute
 
@@ -775,10 +772,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 | `<tbody>`    | Groups the body content in a table                                        |
 | `<tfoot>`    | Groups the footer content in a table                                      |
 
-- To make a `cell span over multiple columns`, use the `colspan` attribute
-- To make a `cell span over multiple rows`, use the `rowspan` attribute
-- value of the `rowspan` attribute represents the number of `rows` to span same for `colspan`, number of column
-- used to `style specific columns` of a table
+- `colspan` : To make a `cell span over multiple columns`
+- `rowspan` : To make a `cell span over multiple rows`
 
 ```html
 <table style="width:100%;">
@@ -1121,7 +1116,7 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 <form>
   <input
     type="image"
-    src="img_submit.gif"
+    src="greenArrow.png"
     alt="Submit"
     width="48"
     height="48"
@@ -1342,44 +1337,38 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </form>
 ```
 
-## HTML Input form Attributes
+## HTML form Attributes
 
-### `formaction Attribute`
+### `action Attribute`
 
 - formaction attribute specifies the `URL of the file that will process the input` when the form is submitted
 
-### `The formenctype Attribute`
-
-- specifies how the `form-data should be encoded` when submitted (only for forms with `method="post"`).
-
-```html
-<form action="/action_page_binary.asp" method="post">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" /><br /><br />
-  <input type="submit" value="Submit" />
-  <input
-    type="submit"
-    formenctype="multipart/form-data"
-    value="Submit as Multipart/form-data"
-  />
-</form>
-```
-
-<form action="/action_page_binary.asp" method="post">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" /><br /><br />
-  <input type="submit" value="Submit" />
-  <input
-    type="submit"
-    formenctype="multipart/form-data"
-    value="Submit as Multipart/form-data"
-  />
-</form>
-
-### `formmethod Attribute`
+### `method Attribute`
 
 - defines the `HTTP method` for sending form-data to the action URL
 - eg `method="get/post"`
+
+### `enctype Attribute`
+
+- specifies how the `form-data should be encoded` when submitted (only for forms with `method="post"`).
+- works with :
+  - `application/x-www-form-urlencoded` : Default. All characters will be encoded before sent.
+  - `multipart/form-data` : This value is necessary if the user will upload a file through the form.
+  - `text/plain` : Sends data without any encoding at all. Not recommended.
+
+```html
+<form
+  action="/action_page_binary.asp"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" /><br /><br />
+  <input type="submit" value="Submit" />
+</form>
+```
 
 ## HTML Iframe
 
@@ -1449,7 +1438,7 @@ z = x + y;
 </code>
 </pre>
 
-### HTML <var> For Variables
+### `<var>`
 
 - used to define a `variable in programming` or in a `mathematical expression`
 - displayed in `italic`
@@ -1465,31 +1454,9 @@ z = x + y;
 
 <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
 
-## HTML Semantic Elements
-
-- `Semantic elements = elements with a meaning`
-- `describes its meaning` to both the `browser` and the `developer`
-- eg `non-semantic elements`: `<div>` and `<span>` - Tells nothing about its content.
-
-- eg `semantic elements`: `<form>`, `<table>`, and `<article>` - Clearly defines its content
-
-| Element        | Description                                                                                |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| `<article>`    | Defines independent, self-contained content                                                |
-| `<aside>`      | Defines content aside from the page content text                                           |
-| `<details>`    | Defines additional details that the user can view or hide text                             |
-| `<figure>`     | Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc |
-| `<figcaption>` | Defines a caption for a `<figure>` element text                                            |
-| `<footer>`     | Defines a footer for a document or section                                                 |
-| `<header>`     | Specifies a header for a document or section                                               |
-| `<main>`       | Specifies the main content of a document                                                   |
-| `<mark>`       | Defines marked/highlighted text                                                            |
-| `<nav>`        | Defines navigation links                                                                   |
-| `<section>`    | Defines a section in a document                                                            |
-| `<summary>`    | Defines a visible heading for a `<details>` element                                        |
-| `<time>`       | Defines a date/time                                                                        |
-
 ## HTML `<details>` and `<summary>` Elements
+
+- specifies `additional details` that the user `can open and close on demand`
 
 ```html
 <details>
@@ -1526,41 +1493,6 @@ z = x + y;
 ### _output:_
 
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
-
-## HTML Entities
-
-- Some characters are `reserved` in HTML.
-- If you use the `less than (<)` or `greater than (>)` signs in your text, the browser `might mix` them with tags.
-- `Character entities` are used to display reserved characters in HTML.
-
-```
-&entity_name;
-OR
-&#entity_number;
-```
-
-- To display `<` : `&lt;` or `&#60;`
-
-## HTML Symbol Entities
-
-- Many `mathematical`, `technical`, and `currency symbols`, are not present on a normal keyboard
-- used to display it
-
-```
-<p>I will display &#8364;</p>
-<p>I will display &#x20AC;</p>
-<p>
-&#128512; &#128516; &#128525; &#128151;
-</p>
-```
-
-### _output:_
-
-<p>I will display &#8364;</p>
-<p>I will display &#x20AC;</p>
-<p>
-&#128512; &#128516; &#128525; &#128151;
-</p>
 
 ## HTML Multimedia
 
@@ -1613,42 +1545,14 @@ OR
 </iframe>
 ```
 
-### Global Attributes
-
-- [The global attributes](http://www.w3schools.com/tags/ref_standardattributes.asp) can be used on **any** HTML element, such as `id`、`class` and `style`.
-
-<br />
-
-### data-\* Attribute
-
-- The `data-*` attributes is a **global attribute** used to store custom data private to the page or application.
-
-- The `data-*` attributes gives us the ability to embed custom data attributes on all HTML elements.
-
-- The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
-
-- The `data-*` attributes consist of two parts：
-
-  1. The attribute name should not contain any uppercase letters, and must be at least one character long after the prefix "data-".
-
-  2. The attribute value can be any string.
-
-- The `*` may be replaced by any name following [the production rule of xml names](https://www.w3.org/TR/REC-xml/#NT-Name) with the following restrictions：
-
-  - the name must not start with xml, whatever case is used for these letters.
-
-  - the name must not contain any semicolon (`U+003A`).
-
-  - the name must not contain capital `A` to `Z` letters.
-
 <br />
 
 ## Block and Inline Elements
 
 ### Block-level Elements
 
-- A block-level element **always starts on a new line**
-- and **takes up the full width available** (stretches out to the left and right as far as it can).
+- A block-level element `always starts on a new line`
+- and `takes up the full width available` (stretches out to the left and right as far as it can).
 
 - Some examples of block-level elements：
 
@@ -1661,8 +1565,8 @@ OR
 
 ### Inline Elements
 
-- **does not start on a new line**
-- and **only takes up as much width as necessary**
+- `does not start on a new line`
+- and `only takes up as much width as necessary`
 
 - Some Examples of inline elements：
 
@@ -1674,17 +1578,36 @@ OR
 
 <br />
 
-## Entities
+## HTML Semantic Elements
 
-**HTML Entities**
+- Semantic elements `describes the purpose of content inside element` to both the `browser` and the `developer`.
 
-- **Reserved characters** in HTML must be **replaced with character entities**.
+| Element        | Description                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| `<article>`    | Defines independent, self-contained content                                                |
+| `<aside>`      | Defines content aside from the page content text                                           |
+| `<details>`    | Defines additional details that the user can view or hide text                             |
+| `<figure>`     | Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc |
+| `<figcaption>` | Defines a caption for a `<figure>` element text                                            |
+| `<footer>`     | Defines a footer for a document or section                                                 |
+| `<header>`     | Specifies a header for a document or section                                               |
+| `<main>`       | Specifies the main content of a document                                                   |
+| `<mark>`       | Defines marked/highlighted text                                                            |
+| `<nav>`        | Defines navigation links                                                                   |
+| `<section>`    | Defines a section in a document                                                            |
+| `<summary>`    | Defines a visible heading for a `<details>` element                                        |
+| `<time>`       | Defines a date/time                                                                        |
 
-- If you use the **less than** (`<`) or **greater than** (`>`) signs in your text, the browser **might mix them with tags**.
+- `Non-semantic elements` `tells nothing about its content`
+- eg. `<div>` and `<span>`
 
-- **Characters that are not present on your keyboard** can also be replaced by entities.
+<br />
 
+## HTML Entities
+
+- `Reserved characters` in HTML must be `replaced with character entities`,as the browser `might mix them with tags`.
 - To display a less than sign (`<`) we must write：`&lt;` or `&#60;`
+- `Characters that are not present on your keyboard` can also be replaced by entities.
 
   ```
   &entity_name;
@@ -1696,408 +1619,41 @@ OR
 
 ![html_entities](./images/html_entities.png)
 
-> **Advantage of using an entity name**：An entity name is **easy to remember**.
+> `Advantage of using an entity name`：An entity name is `easy to remember`.
 
-> **Disadvantage of using an entity name**： **Browsers may not support all entity names**, but the support for **numbers is good**.
+> `Disadvantage of using an entity name`： `Browsers may not support all entity names`, but the support for `numbers is good`.
 
 <br />
 
 ### Non-breaking Space
 
-- Another common use of the **non-breaking space** is to prevent that **browsers truncate spaces** in HTML pages.
+- Another common use of the `non-breaking space` is to prevent that `browsers truncate spaces` in HTML pages.
 
-- If you write **10 spaces** in your text, the browser will **remove 9 of them**. To add real spaces to your text, you can use the `&nbsp;` character entity.
+- If you write `10 spaces` in your text, the browser will `remove 9 of them`. To add real spaces to your text, you can use the `&nbsp;` character entity.
 
 <br />
-
-## Semantic Elements
-
-- A semantic element clearly describes its meaning to both the browser and the developer.
-
-- Examples of non-semantic elements: `<div>` and `<span>` - Tells nothing about its content.
-
-- Examples of semantic elements: `<form>`, `<table>`, and `<article>` - Clearly defines its content.
-
-- eg. `<article>`, `<aside>`, `<details>`, `<figcaption>`,`<figure>`, `<footer>`, `<header>`, `<main>`, `<mark>`, `<nav>`, `<section>`, `<summary>`, `<time>`,
-
-<br/>
 
 ## Uniform Resource Locators
 
 ### HTML URL
 
-- A URL is another word for a **web address**.
+- its `web address`.
 
-- A URL can be **composed of words** (w3schools.com), or an Internet Protocol **(IP) address** (192.68.20.50).
+- A URL can be `composed of words` (w3schools.com), or an Internet Protocol `(IP) address` (192.68.20.50).
 
-- **Web browsers request pages from web servers** by using a URL.
-
-ain** - defines the I**nternet domain name\*\* (l- A web address, like http://www.w3schools.com/html/default.asp follows these syntax rules：
+- `Web browsers request pages from web servers` by using a URL.
 
 ![url](./images/url.webp)
 
 <br />
 
-**URL Encoding**
+### URL Encoding (encodeURIComponent())
 
-- URLs can only be sent over the Internet using the **ASCII character-set** "American Standard Code for Information Interchange"
-
-- URL encoding **converts non-ASCII characters into a format that can be transmitted over the Internet**.
-
-- URL encoding replaces non-ASCII characters with a `%` followed by **hexadecimal digits**.
-
-- URLs **cannot contain spaces**. URL encoding normally replaces a space with a plus (`+`) sign, or `%20`.
-
+- `converts non-ASCII characters into a format (ASCII character-set) that can be transmitted over the Internet`.
+- replaces non-ASCII characters with a `%` followed by `hexadecimal digits`.
+- URLs `cannot contain spaces`.it replaces a `space` with a plus `+` sign, or `%20`.
 - Your browser will encode input, according to the character-set used in your page.
-
-- The **default character-set** in HTML5 is **UTF-8**.
-
-<br />
-
-## HTML DOM
-
-### What is HTML DOM ?
-
-- When a web page is loaded, the browser creates a **Document Object Model** (_DOM_) of the page.
-
-- The HTML DOM model is constructed as a tree of Objects：
-
-  ![The HTML DOM Tree of Objects](./images/dom_tree.png)
-
-- With the object model, **JavaScript gets all the power it needs to create dynamic HTML**
-
-<br />
-
-**DOM Methods**
-
-- The HTML DOM can be **accessed with JavaScript** (and with other programming languages).
-
-- In the DOM, all HTML elements are defined as **objects**.
-
-- The programming interface is the **properties** and **methods** of each object.
-
-- A **property** is a **value that you can get or set** (like changing the content of an HTML element).
-
-- A **method** is an **action you can do** (like add or deleting an HTML element).
-
-  ```html
-  <html>
-    <body>
-      <p id="demo"></p>
-
-      <script>
-        document.getElementById("demo").innerHTML = "Hello World!";
-      </script>
-    </body>
-  </html>
-  ```
-
-  > In the example above, getElementById is a **method**, while innerHTML is a **property**.
-
-<br />
-
-### DOM Document
-
-- The document object **represents your web page**.
-
-- If you want to **access any element in an HTML page**, you always start with accessing the document object.
-
-  - **document.getElementById(id)** - Find an element by element id
-  - **document.getElementsByTagName(name)** - Find elements by tag name
-  - **document.getElementsByClassName(name)** - Find elements by class name
-
-<br />
-
-**DOM Events**
-
-- A **JavaScript can be executed when an event occurs**, like when a user clicks on an HTML element.
-
-  ```html
-  <!DOCTYPE html>
-  <html>
-    <body>
-      <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
-    </body>
-  </html>
-  ```
-
-<br />
-
-### DOM Nodes
-
-- According to the W3C HTML DOM standard,**everything in an HTML document is a node**：
-
-  - The entire document is a **document node**
-  - Every HTML element is an **element node**
-  - The text inside HTML elements are **text nodes**
-  - Every HTML attribute is an **attribute node**
-  - All comments are **comment nodes**
-
-- With the HTML DOM, all nodes in the **node tree can be accessed by JavaScript**.
-
-- New **nodes** can be **created**, and all nodes can be **modified** or **deleted**.
-
-<br />
-
-### DOM Node Relationships
-
-- The nodes in the node tree have a **hierarchical relationship** to each other.
-
-- The terms **parent, child, and sibling **are used to describe the relationships.
-
-  - In a node tree, the **top node** is called the **root** (or root node)
-
-    ```html
-    <html>
-      <head>
-        <title>DOM Tutorial</title>
-      </head>
-
-      <body>
-        <h1>DOM Lesson one</h1>
-        <p>Hello world!</p>
-      </body>
-    </html>
-    ```
-
-    ![node tree](./images/dom_node_relationship.gif)
-
-## BOM
-
-What is BOM ?
-
-- **Browser Object Model** (_BOM_)
-
-- There are **no official standards** for the BOM.
-
-- Since **modern browsers** have implemented (almost) the **same methods and properties** for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.
-
-![dom_vs_bom](./images/dom_vs_bom.png)
-
-<br />
-
-### The Window Object
-
-- The window object is supported by all browsers. It **represents the browser's window.**
-
-- **Global variables** are **properties of the window object**.
-
-- **Global functions** are **methods of the window object**.
-
-- Even the **document object** (of the HTML DOM) is a **property of the window object**：
-
-  ```javascript
-  window.document.getElementById("header");
-  ```
-
-  ![window_object](./images/window_object.webp)
-
-<br />
-
-### Window Screen Object
-
-![window_screen](./images/window_screen.webp)
-
-<br />
-
-### Window Location Object
-
-![window_location](./images/window_location.webp)
-
-<br />
-
-### Window History Object
-
-![window_history](./images/window_history.webp)
-
-<br />
-
-### Window Navigator Object
-
-![window_navigator](./images/window_navigator.webp)
-
-<br />
-
-### Popup Boxes
-
-- BOM has three kind of popup boxes：**Alert box, Confirm box, and Prompt box.**
-
-- those popup boxes **can be written without the window prefix**.
-
-  Methods：
-
-  - window.alert()
-  - window.confirm()
-  - window.prompt()
-
-  ex :
-
-  ```javascript
-  alert("I am an alert box!");
-  ```
-
-<br />
-
-### Timing Events
-
-- The window object allows execution of code at **specified time intervals**.
-
-- These time intervals are called **timing events**.
-
-- The two key methods to use with JavaScript are：
-
-  - **setTimeout(function, milliseconds)**
-
-    - **Executes a function, after waiting a specified number of milliseconds.**
-
-  - **setInterval(function, milliseconds)**
-
-    - Same as setTimeout(), but **repeats the execution of the function continuously.**
-
-  ex :
-
-  ```html
-  <button onclick="setTimeout(myFunction, 3000)">Try it</button>
-
-  <script>
-    function myFunction() {
-      alert("Hello");
-    }
-  </script>
-  ```
-
-<br />
-
-### Cookies
-
-- Cookies let you **store user information** in web pages.
-
-- When a **web server has sent a web page** to a browser, the **connection is shut down**, and the **server forgets everything** about the user.
-
-- Cookies were **invented to solve the problem "how to remember information about the user"**
-
-- Cookies are saved in **name-value pairs** like：
-
-  ```
-  username = John Doe
-  ```
-
-- When a browser requests a web page from a server, **cookies belonging to the page is added to the request**. This way the server gets the necessary data to "remember" information about users.
-
-- JavaScript can **create, read, and delete cookies** with the document.cookie property.
-
-  ```javascript
-  document.cookie =
-    "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-  ```
-
-  > You can also add an **expiry date** (in UTC time). **By default, the cookie is deleted when the browser is closed**
-
-  > With a path parameter, you can tell the browser **what path the cookie belongs **to. **By default, the cookie belongs to the current page**.
-
-- If you want **to find the value of one specified cookie**, you must **write a JavaScript function** that searches for the cookie value in the cookie string.
-
-- The `Domain` and `Path` directives **define the scope of the cookie**.
-
-- If Domain is specified, then subdomains are always included.
-
-  > For example, if `Domain=mozilla.org` is set, then cookies are included on subdomains like `developer.mozilla.org`.
-
-<br />
-
-### Web Storage
-
-- can **store data locally** within the user's browser.
-
-- **Before HTML5**, application data had to be **stored in cookies**, included in every server request.
-
-- Unlike cookies, the **storage limit is far larger** (at least 5MB) and **information is never transferred to the server**.
-
-- **Web storage is per origin** (per `domain` and `protocol`). All pages, from one origin, can store and access the same data.
-
-- Web storage provides two objects for storing data on the client：
-
-  - **window.localStorage** - stores data **with no expiration date**
-  - **window.sessionStorage** - **stores data for one session** (data is lost when the browser tab is closed)
-
-<br />
-
-![window_storage](./images/window_storage.png)
-
-## APIs
-
-### Geolocation
-
-- used to get the `geographical position` of a user
-- Since this can compromise `privacy`, the position is not available unless the `user approves` it
-
-* `getCurrentPosition()` method is used to return the user's position.
-
-```html
-<script>
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-  }
-
-  function onSuccess(position) {
-    console.log(
-      "Latitude: " +
-        position.coords.latitude +
-        "Longitude: " +
-        position.coords.longitude
-    );
-  }
-
-  function onError(error) {
-    console.log(error);
-  }
-</script>
-```
-
-- `watchPosition()` - Returns the `current position of the user and continues to return updated position as the user moves` (like the GPS in a car)
-- clearWatch() - `Stops the watchPosition()` method
-
-<br />
-
-### Web Worker
-
-> When **executing scripts** in an HTML page, the page becomes **unresponsive until the script is finished**.
-
-- A **web worker** is a JavaScript that **runs in the background, independently of other scripts, without affecting the performance** of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
-
-- Since web workers are **in external files**, they **do not have access** to the following JavaScript objects：
-
-  - The **window** object
-  - The **document** object
-  - The **parent** object
-
-<br />
-
-## Performance
-
-### Delay JavaScript Loading
-
-- Putting your **scripts at the bottom of the page** body lets the **browser load the page first**.
-
-- While a **script is downloading**, the browser will **not start any other downloads**. In addition **all parsing and rendering activity might be blocked**.
-
-> The HTTP specification defines that **browsers should not download more than two components in parallel.**
-
-<br />
-
-## HTML Reference
-
-### &lt;script&gt;
-
-- `async` attribute : script will be **fetched in parallel to html parsing** and **evaluated as soon as it is available** (potentially before parsing completes).
-
-- `defer` attribute : script will be **fetched in parallel** and **evaluated when the page has finished parsing**
-
-![async_and_defer](./images/async_and_defer.png)
+- The `default character-set` in HTML5 is `UTF-8`.
 
 <br />
 
