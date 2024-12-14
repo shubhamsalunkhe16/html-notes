@@ -14,6 +14,122 @@
 
 <br/>
 
+### `<head>` Tag
+
+- container for `metadata` and `links` that define the document's properties.
+
+#### Common Elements in `<head>`:
+
+- `<title>`: Defines the title of the document, displayed on the browser tab.
+- `<meta>`: Provides metadata such as character encoding, description, keywords, etc.
+- `<link>`: Links to external resources like stylesheets.
+- `<style>`: Contains internal CSS.
+- `<script>`: Includes or links to JavaScript files.
+- `<base>`: Specifies the base URL for relative links.
+
+### `Meta Tags`
+
+- provide `additional information` about the webpage.
+- `not visible to users` but are `critical for SEO`, `accessibility`, and `browser behavior.`
+
+### Commonly Used Meta Tags:
+
+#### 1. `Charset Meta Tag`
+
+Defines the `character encoding` for the document.
+
+```html
+<meta charset="UTF-8" />
+```
+
+- Ensures proper display of text.
+- `UTF-8` supports most languages and symbols.
+
+#### 2. `Viewport Meta Tag`
+
+`Configures how a webpage is displayed on mobile devices`.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+- `width=device-width`: Matches the screen width of the device.
+- `initial-scale=1.0`: Sets the initial zoom level.
+
+#### 3. `Description Meta Tag`
+
+Provides a `brief description of the webpage content` (important for SEO).
+
+```html
+<meta name="description" content="A brief description of the page content." />
+```
+
+- Appears in search engine results.
+
+#### 4. `Keywords Meta Tag`
+
+Lists `keywords related to the webpage` (less relevant for modern SEO).
+
+```html
+<meta name="keywords" content="HTML, CSS, JavaScript" />
+```
+
+#### 5. `Author Meta Tag`
+
+`Specifies the author` of the document.
+
+```html
+<meta name="author" content="John Doe" />
+```
+
+#### 6. `Robots Meta Tag`
+
+`Controls how search engines index` the page.
+
+```html
+<meta name="robots" content="index, follow" />
+```
+
+- `index`: Allows indexing.
+- `follow`: Allows following links on the page.
+- To prevent indexing:
+  ```html
+  <meta name="robots" content="noindex, nofollow" />
+  ```
+
+### Link Tags
+
+Used to link external resources like CSS, icons, and prefetching resources.
+
+####
+
+```html
+<!-- Linking Stylesheets -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Adding Favicons -->
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<!-- Preloading Resources -->
+<link rel="preload" href="image.jpg" as="image" />
+```
+
+### Script Tags
+
+Used to include JavaScript.
+
+```html
+<script src="script.js"></script>
+```
+
+### Base Tag
+
+Specifies the base URL for relative links.
+
+```html
+<base href="https://example.com/" />
+```
+
 ## Comments
 
 ```html
