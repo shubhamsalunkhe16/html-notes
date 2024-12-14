@@ -6,13 +6,13 @@
 - `represented by tags`.
 - `use them to render the content` on the web page (audio, text, images, etc.)
 
-<br/>
+---
 
 ### HTML Page Structure
 
 ![html_structure](./images/html_structure.png)
 
-<br/>
+---
 
 ### `<head>` Tag
 
@@ -36,7 +36,7 @@
 
 #### 1. `Charset Meta Tag`
 
-Defines the `character encoding` for the document.
+- Defines the `character encoding` for the document.
 
 ```html
 <meta charset="UTF-8" />
@@ -47,7 +47,7 @@ Defines the `character encoding` for the document.
 
 #### 2. `Viewport Meta Tag`
 
-`Configures how a webpage is displayed on mobile devices`.
+- `Configures how a webpage is displayed on mobile devices`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,7 +58,7 @@ Defines the `character encoding` for the document.
 
 #### 3. `Description Meta Tag`
 
-Provides a `brief description of the webpage content` (important for SEO).
+- Provides a `brief description of the webpage content` (important for SEO).
 
 ```html
 <meta name="description" content="A brief description of the page content." />
@@ -68,7 +68,7 @@ Provides a `brief description of the webpage content` (important for SEO).
 
 #### 4. `Keywords Meta Tag`
 
-Lists `keywords related to the webpage` (less relevant for modern SEO).
+- Lists `keywords related to the webpage` (less relevant for modern SEO).
 
 ```html
 <meta name="keywords" content="HTML, CSS, JavaScript" />
@@ -76,7 +76,7 @@ Lists `keywords related to the webpage` (less relevant for modern SEO).
 
 #### 5. `Author Meta Tag`
 
-`Specifies the author` of the document.
+- `Specifies the author` of the document.
 
 ```html
 <meta name="author" content="John Doe" />
@@ -84,7 +84,7 @@ Lists `keywords related to the webpage` (less relevant for modern SEO).
 
 #### 6. `Robots Meta Tag`
 
-`Controls how search engines index` the page.
+- `Controls how search engines index` the page.
 
 ```html
 <meta name="robots" content="index, follow" />
@@ -99,7 +99,7 @@ Lists `keywords related to the webpage` (less relevant for modern SEO).
 
 ### Link Tags
 
-Used to link external resources like CSS, icons, and prefetching resources.
+- Used to link external resources like CSS, icons, and prefetching resources.
 
 ####
 
@@ -116,7 +116,7 @@ Used to link external resources like CSS, icons, and prefetching resources.
 
 ### Script Tags
 
-Used to include JavaScript.
+- Used to include JavaScript.
 
 ```html
 <script src="script.js"></script>
@@ -124,11 +124,13 @@ Used to include JavaScript.
 
 ### Base Tag
 
-Specifies the base URL for relative links.
+- Specifies the base URL for relative links.
 
 ```html
 <base href="https://example.com/" />
 ```
+
+---
 
 ## Comments
 
@@ -139,7 +141,7 @@ Specifies the base URL for relative links.
 - `not displayed` by the browser.
 - `can help to document` source code.
 
-<br />
+---
 
 ### How HTML elements should be displayed/styled by CSS?
 
@@ -149,7 +151,7 @@ Specifies the base URL for relative links.
 
 - Recommanded to `keep css in separate files`.
 
-<br/>
+---
 
 ### Makes HTML pages more dynamic and interactive by JavaScript
 
@@ -157,9 +159,7 @@ Specifies the base URL for relative links.
 
 ![add_js](./images/add_js.png)
 
-<br/>
-
-## Elements
+---
 
 ### HTML Elements
 
@@ -167,7 +167,7 @@ Specifies the base URL for relative links.
 
 ![html_tag_breakdown](./images/html_tag_breakdown.png)
 
-<br />
+---
 
 #### Do Not Forget the End TagDo Not Forget the End Tag
 
@@ -184,38 +184,31 @@ Specifies the base URL for relative links.
 
 > Never rely on this. It might produce unexpected results and/or errors if you forget the end tag.
 
-<br />
+---
 
 ### Empty HTML Elements
 
 - `elements with no content, so no closing tag`
 - Empty elements `can be closed in the opening tag` like this：`<br />`.
 
-<br />
+---
 
 ### Use Lowercase Tags
 
 - `not case sensitive`：`<P>` means the same as `<p>`.
 - `recommends lowercase.`
 
-<br />
-
-## Attributes
+---
 
 ### HTML Attributes
 
 - provide `additional information` about an element.
 - `always specified in the start tag`.
 - `name/value pairs` like：name="value".
-
-<br />
-
-`Use Lowercase Attributes`
-
 - `not case sensitive`
 - `recommends lowercase`
 
-<br />
+---
 
 ### Core/Global Attributes
 
@@ -286,6 +279,8 @@ Specifies the base URL for relative links.
 </p>
 ```
 
+---
+
 ## Nesting elements
 
 - `elements can contain other elements`
@@ -299,6 +294,8 @@ Specifies the base URL for relative links.
 ```html
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
+
+---
 
 ## Marking up text
 
@@ -341,6 +338,8 @@ Specifies the base URL for relative links.
 
 - #### _output :_ <p>This is a single paragraph</p>
 
+---
+
 ## HTML Horizontal Rules `<hr>`
 
 - defines a `thematic break`
@@ -352,8 +351,10 @@ Specifies the base URL for relative links.
 - used for `line break` (a new line)
 - without starting a new paragraph
 - #### _output :_
-  <br/>
-  <br/>
+
+<br/>
+
+---
 
 ## `<pre>`
 
@@ -542,6 +543,8 @@ Specifies the base URL for relative links.
 - #### _output :_
   <span>WWW<sup>[1]</sup></span>
 
+---
+
 ## HTML Quotation and Citation Elements
 
 ## `<blockquote>`
@@ -646,6 +649,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 - #### _output :_
   <bdo dir="rtl">This text will be written from right to left</bdo>
 
+---
+
 ## HTML Links
 
 - HTML links are `hyperlinks`
@@ -736,6 +741,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 <a href="html_demo.html#C4">Jump to Chapter 4</a>s
 ```
 
+---
+
 ## HTML Images `<img>`
 
 - used to `embed an image`
@@ -774,6 +781,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </script>
 ```
 
+---
+
 ### HTML `<picture>` Element
 
 - allows to display `different pictures for different devices or screen sizes`.
@@ -790,6 +799,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 - Always specify an `<img>` element as the `last child` element of the `<picture>` element for `fallback`.
 
+---
+
 ### HTML Favicon
 
 ```html
@@ -800,6 +811,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 ```
 
 - `Tip`: A favicon is a small image, so it should be a simple image with high contrast.
+
+---
 
 ## Lists `<ol>/<ul>/<dl>`
 
@@ -870,6 +883,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <dt>Milk</dt>
   <dd>- white cold drink</dd>
 </dl>
+
+---
 
 ## HTML Tables
 
@@ -960,6 +975,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   </tr>
   </tbody>
 </table>
+
+---
 
 ## HTML Forms
 
@@ -1260,6 +1277,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
   <input type="url" id="homepage" name="homepage">
 </form>
 
+---
+
 ## HTML `<select>` Tag
 
 - Create a `drop-down list`
@@ -1295,6 +1314,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
     <option value="audi">Audi</option>
   </optgroup>
 </select>
+
+---
 
 ## HTML Input Attributes
 
@@ -1453,6 +1474,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </form>
 ```
 
+---
+
 ## HTML form Attributes
 
 ### `action Attribute`
@@ -1486,6 +1509,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </form>
 ```
 
+---
+
 ## HTML Iframe
 
 - used to `embed another document` within the `current HTML document`
@@ -1495,6 +1520,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 ```
 
 - `title` attribute used by `screen readers` to read out what the content of the iframe is
+
+---
 
 ## HTML Computer Code Elements
 
@@ -1509,6 +1536,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 ### _output :_
 
 <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+---
 
 ### `<samp>`
 
@@ -1525,6 +1554,8 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 <p>Message from my computer:</p>
 <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+---
 
 ### `<code>`
 
@@ -1554,6 +1585,8 @@ z = x + y;
 </code>
 </pre>
 
+---
+
 ### `<var>`
 
 - used to define a `variable in programming` or in a `mathematical expression`
@@ -1569,6 +1602,8 @@ z = x + y;
 ### _output :_
 
 <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+
+---
 
 ## HTML `<details>` and `<summary>` Elements
 
@@ -1591,6 +1626,8 @@ z = x + y;
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions.</p>
 </details>
 
+---
+
 ## HTML `<figure>` and `<figcaption>` Elements
 
 ```html
@@ -1599,6 +1636,8 @@ z = x + y;
   <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
 </figure>
 ```
+
+---
 
 ## HTML `<time>` Elements
 
@@ -1609,6 +1648,8 @@ z = x + y;
 ### _output:_
 
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+---
 
 ## HTML Multimedia
 
@@ -1632,6 +1673,8 @@ z = x + y;
 ```
 
 - [audio and video methods reference](https://www.w3schools.com/tags/ref_av_dom.asp)
+
+---
 
 ## HTML YouTube Videos
 
@@ -1661,7 +1704,7 @@ z = x + y;
 </iframe>
 ```
 
-<br />
+---
 
 ## Block and Inline Elements
 
@@ -1677,7 +1720,7 @@ z = x + y;
   - `<p>`
   - `<form>`
 
-<br />
+---
 
 ### Inline Elements
 
@@ -1692,7 +1735,7 @@ z = x + y;
 
 ![block_vs_inline_diagram](./images/block_vs_inline_diagram.png)
 
-<br />
+---
 
 ## HTML Semantic Elements
 
@@ -1717,7 +1760,7 @@ z = x + y;
 - `Non-semantic elements` `tells nothing about its content`
 - eg. `<div>` and `<span>`
 
-<br />
+---
 
 ## HTML Entities
 
@@ -1739,7 +1782,7 @@ z = x + y;
 
 > `Disadvantage of using an entity name`： `Browsers may not support all entity names`, but the support for `numbers is good`.
 
-<br />
+---
 
 ### Non-breaking Space
 
@@ -1747,7 +1790,7 @@ z = x + y;
 
 - If you write `10 spaces` in your text, the browser will `remove 9 of them`. To add real spaces to your text, you can use the `&nbsp;` character entity.
 
-<br />
+---
 
 ## Uniform Resource Locators
 
@@ -1761,7 +1804,7 @@ z = x + y;
 
 ![url](./images/url.webp)
 
-<br />
+---
 
 ### URL Encoding (encodeURIComponent())
 
@@ -1771,7 +1814,7 @@ z = x + y;
 - Your browser will encode input, according to the character-set used in your page.
 - The `default character-set` in HTML5 is `UTF-8`.
 
-<br />
+---
 
 ## Reference Information
 
@@ -1785,4 +1828,4 @@ Scripting (Website : [WHATWG HTML Living Standard](https://html.spec.whatwg.org/
 
 Github repo (link : [Github Repo link](https://github.com/mujan5427/HTML-Notes))
 
-<br />
+---
