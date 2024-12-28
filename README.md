@@ -212,7 +212,7 @@
 
 ### Core/Global Attributes
 
-- 4 core attributes are `id`,`class`,`title`,`style`,`data-*`
+- 5 core attributes are `id`,`class`,`title`,`style`,`data-*`
 
 ### The Id Attribute
 
