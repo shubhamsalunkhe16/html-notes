@@ -1,24 +1,24 @@
-### What is HTML ?
+## What is HTML ?
 
-- stands for `Hyper Text Markup Language`.
+- stands for `Hyper Text Markup Language`
 - describes the `structure of Web pages` using markup
-- `building blocks` of web pages.
-- `represented by tags`.
+- `building blocks` of web pages
+- `represented by tags`
 - `use them to render the content` on the web page (audio, text, images, etc.)
 
 ---
 
-### HTML Page Structure
+## HTML Page Structure
 
 ![html_structure](./images/html_structure.png)
 
 ---
 
-### `<head>` Tag
+## `<head>` Tag
 
 - container for `metadata` and `links` that define the document's properties.
 
-#### Common Elements in `<head>`:
+### Common Elements in `<head>`:
 
 - `<title>`: Defines the title of the document, displayed on the browser tab.
 - `<meta>`: Provides metadata such as character encoding, description, keywords, etc.
@@ -34,68 +34,19 @@
 
 ### Commonly Used Meta Tags:
 
-#### 1. `Charset Meta Tag`
-
-- Defines the `character encoding` for the document.
-
-```html
-<meta charset="UTF-8" />
-```
-
-- Ensures proper display of text.
-- `UTF-8` supports most languages and symbols.
-
-#### 2. `Viewport Meta Tag`
-
-- `Configures how a webpage is displayed on mobile devices`.
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-```
-
-- `width=device-width`: Matches the screen width of the device.
-- `initial-scale=1.0`: Sets the initial zoom level.
-
-#### 3. `Description Meta Tag`
-
-- Provides a `brief description of the webpage content` (important for SEO).
-
-```html
-<meta name="description" content="A brief description of the page content." />
-```
-
-- Appears in search engine results.
-
-#### 4. `Keywords Meta Tag`
-
-- Lists `keywords related to the webpage` (less relevant for modern SEO).
-
-```html
-<meta name="keywords" content="HTML, CSS, JavaScript" />
-```
-
-#### 5. `Author Meta Tag`
-
-- `Specifies the author` of the document.
-
-```html
-<meta name="author" content="John Doe" />
-```
-
-#### 6. `Robots Meta Tag`
-
-- `Controls how search engines index` the page.
-
-```html
-<meta name="robots" content="index, follow" />
-```
-
-- `index`: Allows indexing.
-- `follow`: Allows following links on the page.
-- To prevent indexing:
-  ```html
-  <meta name="robots" content="noindex, nofollow" />
-  ```
+| **Meta Tag**                | **Description**                                                                | **Example**                                                                  |
+| --------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **Charset**                 | Defines the character encoding for the webpage. Ensures proper text rendering. | `<meta charset="UTF-8">`                                                     |
+| **Viewport**                | Controls page scaling on mobile devices. Makes websites responsive.            | `<meta name="viewport" content="width=device-width, initial-scale=1.0">`     |
+| **Description**             | Provides a short description of the page for search engines (SEO).             | `<meta name="description" content="Best soy candles with soothing scents.">` |
+| **Keywords** _(deprecated)_ | Used to specify keywords for search engines (mostly ignored now).              | `<meta name="keywords" content="candles, soy wax, handmade">`                |
+| **Author**                  | Defines the author of the webpage.                                             | `<meta name="author" content="Shubham Salunkhe">`                            |
+| **Robots**                  | Instructs search engine crawlers on indexing/following links.                  | `<meta name="robots" content="index, follow">`                               |
+| **Refresh/Redirect**        | Automatically refreshes or redirects a page after a given time.                | `<meta http-equiv="refresh" content="5;url=https://example.com">`            |
+| **HTTP-Equiv**              | Provides HTTP headers (e.g., content type, cache control).                     | `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`        |
+| **Theme Color**             | Sets the browser’s theme color (for mobile address bar customization).         | `<meta name="theme-color" content="#ffffff">`                                |
+| **Open Graph (OG)**         | Used for social media sharing (Facebook, LinkedIn).                            | `<meta property="og:title" content="Buy Premium Soy Candles">`               |
+| **Twitter Cards**           | Controls how links appear when shared on Twitter.                              | `<meta name="twitter:card" content="summary_large_image">`                   |
 
 ### Link Tags
 
@@ -143,33 +94,47 @@
 
 ---
 
-### How HTML elements should be displayed/styled by CSS?
+## How HTML elements should be displayed/styled by CSS?
 
 - CSS can be added to HTML elements in `3 ways`：
 
-![add_css](./images/add_css.webp)
-
-- Recommanded to `keep css in separate files`.
+| **Aspect**          | **Inline**                          | **Internal**                       | **External**             |
+| ------------------- | ----------------------------------- | ---------------------------------- | ------------------------ |
+| **Written in**      | `style` attribute.                  | `<style>` in `<head>`.             | Separate `.css` file.    |
+| **Syntax Example**  | `<h1 style="color:red;">Hello</h1>` | `<style>h1 {color: blue;}</style>` | `h1 { color: green; }`   |
+| **Scope**           | Single element.                     | One page.                          | Multiple pages.          |
+| **Reusability**     | ❌ None.                            | ❌ Page-specific.                  | ✅ Fully reusable.       |
+| **Maintainability** | ❌ Poor.                            | ⚠️ Medium.                         | ✅ Best (centralized).   |
+| **Performance**     | ⚠️ Slightly faster.                 | ⚠️ Loads with HTML.                | ✅ Cached, faster.       |
+| **Best for**        | Quick fixes/testing.                | Single-page styles.                | Full sites/pro projects. |
+| **Readability**     | ❌ Messy.                           | ⚠️ Better.                         | ✅ Clean separation.     |
 
 ---
 
-### Makes HTML pages more dynamic and interactive by JavaScript
+## Makes HTML pages more dynamic and interactive by JavaScript
 
 - JS can be added to HTML elements in `3 ways`：
 
-![add_js](./images/add_js.png)
+| **Aspect**          | **Inline**                                            | **Internal**                              | **External**                                                 |
+| ------------------- | ----------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| **Written in**      | `onclick`, `onchange`.                                | `<script>` in HTML.                       | Separate `.js` file.                                         |
+| **Syntax Example**  | `<button onclick="alert('Hello!')">Click Me</button>` | `<script>console.log("Hello!");</script>` | `<script src="app.js"></script>`<br>`console.log("Hello!");` |
+| **Scope**           | Single element/action.                                | One page.                                 | Multiple pages.                                              |
+| **Reusability**     | ❌ None.                                              | ❌ Page-specific.                         | ✅ Fully reusable.                                           |
+| **Maintainability** | ❌ Poor.                                              | ⚠️ Medium.                                | ✅ Best (centralized).                                       |
+| **Performance**     | ⚠️ Slightly faster.                                   | ⚠️ Blocks if in `<head>`.                 | ✅ Cached, can use `defer`.                                  |
+| **Best for**        | Quick event handlers.                                 | Small page-specific JS.                   | Full websites/web apps.                                      |
+| **Readability**     | ❌ Messy.                                             | ⚠️ Better.                                | ✅ Clean separation.                                         |
 
 ---
 
-### HTML Elements
+## HTML Elements
 
 - usually consists of a `start tag` and `end tag`, with the `content` inserted in between.
 
 ![html_tag_breakdown](./images/html_tag_breakdown.png)
 
----
-
-#### Do Not Forget the End TagDo Not Forget the End Tag
+### Do Not Forget the End Tag
 
 - Some HTML elements `will display correctly, even if you forget the end tag`：
 
@@ -184,104 +149,17 @@
 
 > Never rely on this. It might produce unexpected results and/or errors if you forget the end tag.
 
----
-
 ### Empty HTML Elements
 
 - `elements with no content, so no closing tag`
 - Empty elements `can be closed in the opening tag` like this：`<br />`.
-
----
 
 ### Use Lowercase Tags
 
 - `not case sensitive`：`<P>` means the same as `<p>`.
 - `recommends lowercase.`
 
----
-
-### HTML Attributes
-
-- provide `additional information` about an element.
-- `always specified in the start tag`.
-- `name/value pairs` like：name="value".
-- `not case sensitive`
-- `recommends lowercase`
-
----
-
-### Core/Global Attributes
-
-- 5 core attributes are `id`,`class`,`title`,`style`,`data-*`
-
-### The Id Attribute
-
-- used to specify a `unique id` for an HTML element
-- used by `CSS` and `JavaScript` to `select and access` specific elements
-- `case sensitive`
-
-```html
-<p id="html">This para explains what is HTML</p>
-```
-
-### The class Attribute
-
-- specifies `one or more` class names for an element
-- used by `CSS` and `JavaScript` to `select and access` specific elements
-- `case sensitive`
-- `Different HTML elements` can point to the `same class name`
-
-```html
-<p class="sub-heading bold italic">This para explains what is HTML</p>
-...
-<p class="sub-heading">This para explains what is HTML</p>
-...
-<p class="sub-heading">This para explains what is HTML</p>
-```
-
-### The title Attribute
-
-- displayed as a `tooltip` when cursor comes over.
-
-```html
-<h3 title="Hello HTML!">Titled Heading Tag Example</h3>
-```
-
-### The Style Attribute
-
-- used to `add styles` to an element
-
-```html
-<tagname style="property:value;">...</tagname>
-
-<body style="background-color:red;font-size:12px">
-  ...
-</body>
-```
-
-### data-\* Attribute
-
-- used to `store custom data` private to the page or application.
-- The stored data can then be used in the page's `CSS` or `JavaScript` to create a more engaging user experience.
-
-- The `data-*` attributes consist of two parts：
-  1. The attribute name should not contain any `uppercase letters`, and must be at `least one character` long after the prefix "data-".
-  2. The attribute value `can be any string`.
-
-```html
-<div id="mydiv" data-myval="10"></div>
-<p
-  onclick="showDetails(this)"
-  data-director-name="Christopher Nolan"
-  data-released-year="2010"
->
-  Inception
-</p>
-```
-
----
-
-## Nesting elements
+### Nesting elements
 
 - `elements can contain other elements`
 
@@ -297,357 +175,52 @@
 
 ---
 
-## Marking up text
+## HTML Attributes
 
-### Headings `<h1> - <h6>`
+- provide `additional information` about an element.
+- `always specified in the start tag`.
+- `name/value pairs` like：name="value".
+- `not case sensitive`
+- `recommends lowercase`
 
-- `defines` the most important `headings and subheadings`
-- contains `6` heading levels, `<h1> - <h6>`
+### Core/Global Attributes
 
-```html
-<h1>My main title</h1>
-<h2>My top level heading</h2>
-<h3>My subheading</h3>
-<h4>My sub-subheading</h4>
-<h5>My sub-subheading</h5>
-<h6>My sub-subheading</h6>
-```
+- 5 core attributes are `id`,`class`,`title`,`style`,`data-*`
 
-### _output :_
-
-<h1>My main title</h1>
-<h2>My top level heading</h2>
-<h3>My subheading</h3>
-<h4>My sub-subheading</h4>
-<h5>My sub-subheading</h5>
-<h6>My sub-subheading</h6>
-
-`Note:`
-
-- `search engines` use the headings to `index` the structure and content of your web pages
-- `Don't use` headings `to make text BIG or bold`
-
-## Paragraphs `<p>`
-
-- `regular text content`
-- `browser will automatically remove extra spaces in content`
-
-```html
-<p>This is a single paragraph</p>
-```
-
-- #### _output :_ <p>This is a single paragraph</p>
+| **Attribute** | **Purpose**                                                                                | **Example**                                            | **Notes / Use Cases**                                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **`id`**      | Assigns a **unique identifier** to an element. Used for CSS, JS, and navigation (anchors). | `<div id="header"></div>`                              | Must be **unique per page**. Often used for **JS targeting** (`document.getElementById`) and **CSS styling** (`#header`).          |
+| **`class`**   | Assigns one or more **class names** to an element for styling or scripting.                | `<p class="intro highlight"></p>`                      | Can be reused across multiple elements. Useful for **group styling** and **JS selectors** (`document.querySelectorAll('.class')`). |
+| **`title`**   | Provides **extra information** about an element (tooltip on hover).                        | `<button title="Click to submit form">Submit</button>` | Improves **accessibility** and **UX**. Screen readers also read this.                                                              |
+| **`style`**   | Adds **inline CSS** styles directly to the element.                                        | `<h1 style="color:red; font-size:20px;">Hello</h1>`    | **Avoid for large projects** — hard to maintain. Use **external CSS** instead.                                                     |
+| **`data-*`**  | Stores **custom data** on elements without affecting rendering.                            | `<div data-user-id="123" data-role="admin"></div>`     | Used to store **dynamic values** for **JavaScript** (e.g., `element.dataset.userId`). Very helpful in **dynamic UIs**.             |
 
 ---
 
-## HTML Horizontal Rules `<hr>`
-
-- defines a `thematic break`
-- `used to separate content`
-- #### _output :_ <hr/>
-
-## HTML Line Breaks `<br>`
-
-- used for `line break` (a new line)
-- without starting a new paragraph
-- #### _output :_
-
-<br/>
-
----
-
-## `<pre>`
-
-- defines `preformatted text`
-- displayed in a fixed-width font (usually Courier), and it `preserves both spaces and line breaks`
-
-```html
-<pre>
-  My Bonnie lies over the ocean.
-
-  My Bonnie lies over the sea.
-
-  My Bonnie lies over the ocean.
-
-  Oh, bring back my Bonnie to me.
-</pre>
-```
-
-- #### _output :_
-
-<pre style="color:yellow">
-  My Bonnie lies over the ocean.
-
-  My Bonnie lies over the sea.
-
-  My Bonnie lies over the ocean.
-
-  Oh, bring back my Bonnie to me.
-</pre>
-
-## HTML Formatting Elements
-
-| Element    | Description      |
-| ---------- | ---------------- |
-| `<b>`      | Bold text        |
-| `<strong>` | Important text   |
-| `<i>`      | Italic text      |
-| `<em>`     | Emphasized text  |
-| `<mark>`   | Marked text      |
-| `<small>`  | Smaller text     |
-| `<del>`    | Deleted text     |
-| `<s>`      | Strike text      |
-| `<ins>`    | Inserted text    |
-| `<u>`      | Underlined text  |
-| `<sub>`    | Subscript text   |
-| `<sup>`    | Superscript text |
-
-## `<b>`
-
-- defines `bold text`
-- `without any extra importance`
-
-```html
-<b>This text is bold</b>
-```
-
-- #### _output :_
-  <b>This text is bold</b>
-
-## `<strong>`
-
-- defines text with `strong importance`
-- displayed in `bold text`
-
-```html
-<strong>This text is important!</strong>
-```
-
-- #### _output :_
-  <strong>This text is important!</strong>
-
-## `<i>`
-
-- used to indicate a `technical term, a phrase from another language, a thought, a ship name`, etc
-
-```html
-<i>This text is italic</i>
-```
-
-- #### _output :_
-  <i>This text is italic</i>
-
-## `<em>`
-
-- defines `emphasized text`
-- `screen reader` will pronounce the words in `<em>` with an emphasis, using `verbal stress`
-
-```html
-<em>This text is emphasized</em>
-```
-
-- #### _output :_
-  <em>This text is italic</em>
-
-## `<small>`
-
-- defines `smaller text`
-
-```html
-<small>This text is small</small>
-```
-
-- #### _output :_
-  <small>This text is italic</small>
-
-## `<mark>`
-
-- defines `marked or highlighted` text
-
-```html
-<span>Do not forget to buy <mark>milk</mark> today.</span>
-```
-
-- #### _output :_
-  <span>Do not forget to buy <mark>milk</mark> today.</span>
-
-## `<del>`
-
-- defines `text deleted` from a document
-- usually renders in `strike a line` through deleted text
-
-```html
-<span>My favorite color is <del>blue</del> red.</span>
-```
-
-- #### _output :_
-  <span>My favorite color is <del>blue</del> red.</span>
-
-## `<s>`
-
-- renders in `strike a line` through text
-
-```html
-<span>My favorite color is <s>blue</s> red.</span>
-```
-
-- #### _output :_
-  <span>My favorite color is <s>blue</s> red.</span>
-
-## `<ins>`
-
-- defines a `text inserted` into a document
-- usually renders in `underline` inserted text
-
-```html
-<span>My favorite color is <ins>red</ins>.</span>
-```
-
-- #### _output :_
-  <span>My favorite color is <ins>red</ins>.</span>
-
-## `<u>`
-
-- renders `underlined` text
-
-```html
-<span>My favorite color is <u>red</u>.</span>
-```
-
-- #### _output :_
-  <span>My favorite color is <u>red</u>.</span>
-
-## `<sub>`
-
-- defines `subscript text`
-- subscript text appears `half a character below` the normal line
-- used for `chemical formulas`,etc
-
-```html
-<span>H<sub>2</sub>0</span>
-```
-
-- #### _output :_
-  <span>H<sub>2</sub>0</span>
-
-## `<sup>`
-
-- defines `superscript text`
-- superscript text appears `half a character above` the normal line
-- used for `footnotes`, `math square`,etc
-
-```html
-<span>WWW<sup>[1]</sup></span>
-```
-
-- #### _output :_
-  <span>WWW<sup>[1]</sup></span>
-
----
-
-## HTML Quotation and Citation Elements
-
-## `<blockquote>`
-
-- defines a section that is `quoted from another source`
-- `cite attribute` defines the `source`
-- browsers usually `indent` it
-
-```html
-<p>Here is a quote from WWF's website:</p>
-<blockquote cite="http://www.worldwildlife.org/who/index.html">
-  For 60 years, WWF has worked to help people and nature thrive. As the world's
-  leading conservation organization, WWF works in nearly 100 countries.
-</blockquote>
-```
-
-- #### _output :_
-<p>Here is a quote from WWF's website:</p>
-<blockquote cite="http://www.worldwildlife.org/who/index.html">
-For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries.
-</blockquote>
-
-## `<q>`
-
-- defines a `short quotation`
-- browsers normally insert `quotation marks` around the quotation
-
-```html
-<span>
-  WWF's goal is to:
-  <q>Build a future where people live in harmony with nature.</q>
-</span>
-```
-
-- #### _output :_ <span>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></span>
-
-## `<abbr>`
-
-- defines an `abbreviation`, like `HTML`, `CSS`, `Mr.`, `Dr.`, `ASAP`, `ATM`,etc
-- can give useful information to `browsers`, `translation systems` and `search-engines`
-
-- `Tip`: use `title attribute` to show the description for the abbreviation/acronym when you mouse over the element
-
-```html
-<span>
-  The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
-</span>
-```
-
-- #### _output :_
-  <span>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</span>
-
-## `<address>`
-
-- defines the `contact information`
-- contact information can be an `email address`, `URL`, `physical address`, `phone number`, `social media handle`, etc
-- usually renders in `italic`
-- browsers will always `add a line break before and after` the it
-
-```html
-<address>
-  Written by John Doe.<br />
-  Visit us at:<br />
-  Example.com<br />
-  Box 564, Disneyland<br />
-  USA
-</address>
-```
-
-- #### _output :_
-  <address>
-  Written by John Doe.<br>
-  Visit us at:<br>
-  Example.com<br>
-  Box 564, Disneyland<br>
-  USA
-  </address>
-
-## `<cite>`
-
-- defines the `title of a creative work` (e.g. `a book`, `a song`, `a movie`,etc.)
-- usually renders in `italic`
-
-`Note`: A person's name is not the title of a work.
-
-```html
-<span><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</span>
-```
-
-- #### _output :_
-  <span><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</span>
-
-## `<bdo>`
-
-- BDO stands for `Bi-Directional Override`.
-- used to `override the current text direction`
-
-```html
-<bdo dir="rtl">This text will be written from right to left</bdo>
-```
-
-- #### _output :_
-  <bdo dir="rtl">This text will be written from right to left</bdo>
+## HTML Text Markup Elements
+
+| **Tag**        | **Purpose**                                             | **Example (Code)**                                     | **How It Displays**                                | **Notes / Usage**                                                       |
+| -------------- | ------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------------- |
+| `<h1>`–`<h6>`  | Defines **headings** (h1 = most important, h6 = least). | `<h1>Main Title</h1>`<br>`<h3>Subheading</h3>`         | **Main Title** (large)<br>**Subheading** (smaller) | **Use for content hierarchy & SEO.** Only one `<h1>` per page ideally.  |
+| `<p>`          | Defines a **paragraph**.                                | `<p>This is a paragraph.</p>`                          | Adds space above & below text                      | Basic content container. **Block-level element.**                       |
+| `<span>`       | Generic **inline container** for text.                  | `<span class="highlight">Text</span>`                  | No visual change by default                        | Use for **styling specific text** or **wrapping small inline content**. |
+| `<b>`          | Makes text **bold** (no semantic meaning).              | `<b>Important</b>`                                     | **Important**                                      | Purely visual. Prefer `<strong>` when meaning matters.                  |
+| `<strong>`     | Marks text as **important** (bold + semantic).          | `<strong>Warning!</strong>`                            | **Warning!**                                       | Semantic emphasis. Screen readers highlight it.                         |
+| `<i>`          | Makes text **italic** (visual only).                    | `<i>Italic text</i>`                                   | _Italic text_                                      | Prefer `<em>` for meaningful emphasis.                                  |
+| `<em>`         | Adds **emphasis** (italic + semantic).                  | `<em>Very important</em>`                              | _Very important_                                   | Better for accessibility than `<i>`.                                    |
+| `<mark>`       | Highlights text.                                        | `This is <mark>highlighted</mark>.`                    | This is <mark>highlighted</mark>.                  | Useful for search results or key terms.                                 |
+| `<small>`      | Renders text **smaller** than normal.                   | `<small>Fine print</small>`                            | <small>Fine print</small>                          | Often used for disclaimers or captions.                                 |
+| `<del>`        | Shows **deleted** (strikethrough) text.                 | `<del>Old price: $50</del>`                            | <del>Old price: \$50</del>                         | Used for content removal (often with `<ins>`).                          |
+| `<ins>`        | Shows **inserted** (underlined) text.                   | `<ins>New price: $40</ins>`                            | <ins>New price: \$40</ins>                         | Indicates added content.                                                |
+| `<sub>`        | Displays **subscript** text.                            | `H<sub>2</sub>O`                                       | H<sub>2</sub>O                                     | Used in chemical formulas or math.                                      |
+| `<sup>`        | Displays **superscript** text.                          | `E = mc<sup>2</sup>`                                   | E = mc<sup>2</sup>                                 | Used for powers, ordinals, footnotes.                                   |
+| `<q>`          | Inline **short quotation**.                             | `<q>This is a quote</q>`                               | “This is a quote”                                  | Adds quotation marks automatically.                                     |
+| `<blockquote>` | **Block-level quotation**.                              | `<blockquote>Quoted paragraph</blockquote>`            | Indented block of text                             | Used for large quotes, often with `<cite>`.                             |
+| `<code>`       | Displays **inline code**.                               | `<code>console.log('Hello')</code>`                    | `console.log('Hello')`                             | Use inside `<pre>` for multi-line code blocks.                          |
+| `<pre>`        | **Preformatted** text (preserves spacing).              | `<pre>  Indented text</pre>`                           | Preserves spaces & line breaks                     | Used for code, ASCII art, or preformatted text.                         |
+| `<abbr>`       | Defines an **abbreviation**.                            | `<abbr title="Hypertext Markup Language">HTML</abbr>`  | HTML _(tooltip on hover)_                          | Improves accessibility with tooltips.                                   |
+| `<cite>`       | Marks a **citation/reference**.                         | `<cite>— Shakespeare</cite>`                           | — Shakespeare                                      | Used for sources, books, authors.                                       |
+| `<dfn>`        | Defines a **term**.                                     | `<dfn>API</dfn> is Application Programming Interface.` | **API** is Application Programming Interface.      | Indicates a term being defined.                                         |
 
 ---
 
@@ -655,101 +228,42 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 - HTML links are `hyperlinks`
 - can click on a link and `jump to another document`
-- `cursor` will be `pointer`
-
 - `Note:` A link does not have to be text. A `link can be an image or any other HTML element!`
 
-```html
-<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
-
-<a href="default.asp">
-  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;" />
-</a>
-
-<!-- How to link to an email address: -->
-<a href="mailto:someone@example.com">Send email</a>
-
-<!-- How to link to a phone number: -->
-<a href="tel:+4733378901">+47 333 78 901</a>
-
-<!-- How to link to another section on the same page: -->
-<a href="#section2">Go to Section 2</a>
-```
-
-### target attribute
-
-- specifies `where to open the linked document`
-- can have one of the following values:
-
-  - `_self` - Default. Opens the document in the `same window/tab`
-  - `_blank` - Opens the document in a `new window or tab`
-  - `_parent` - Opens the document in the `parent frame`
-  - `_top` - Opens the document in the `full body of the window`
-
-### By default, links will appear as follows in all browsers
-
-- `unvisited link` => underlined and blue
-- `visited link` => underlined and purple
-- `active link` => underlined and red
-
-- You can `change the link state colors`, by using CSS:
-
-```html
-<style>
-  /* unvisited link will be green with no underline. */
-  a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  /* visited link will be pink with no underline. */
-  a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  /* hover link will become red and underlined */
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  /* active link will be yellow and underlined. */
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-</style>
-```
-
-### Create a Bookmark in HTML
-
-- can `jump to specific parts` of a web page
-- use the `id` attribute (id="value") to define bookmarks in a page
-- use the `href` attribute (href="#value") to link to the bookmark
-
-```html
-<h2 id="C4">Chapter 4</h2>
-. . .
-<a href="#C4">Jump to Chapter 4</a>
-```
-
-- You can also add a link to a `bookmark` on another page:
-
-```html
-<a href="html_demo.html#C4">Jump to Chapter 4</a>s
-```
+| **Attribute / Type**            | **Purpose**                                                   | **Example**                                                                             | **Notes / Usage**                                                                      |
+| ------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **`href`**                      | Defines the destination of the link.                          | `<a href="https://example.com">Visit</a>`                                               | Can be **absolute** (`https://...`), **relative** (`/about`), **anchor** (`#section`). |
+| **Relative link**               | Links to a page **within the same site/project**.             | `<a href="/about.html">About Us</a>`                                                    | Good for internal navigation.                                                          |
+| **Absolute link**               | Links to a **complete URL** (external site).                  | `<a href="https://google.com">Google</a>`                                               | Used for external resources.                                                           |
+| **Anchor link**                 | Jumps to a **specific section** on the same page.             | `<a href="#contact">Contact</a>` → `<div id="contact">...</div>`                        | Great for **page navigation** (Table of contents, jump links).                         |
+| **`target="_self"`**            | Opens in the **same tab** (default).                          | `<a href="page.html" target="_self">Same Tab</a>`                                       | Default behavior.                                                                      |
+| **`target="_blank"`**           | Opens link in a **new tab/window**.                           | `<a href="https://example.com" target="_blank">New Tab</a>`                             | Use with `rel="noopener noreferrer"` for **security**.                                 |
+| **`rel="noopener noreferrer"`** | **Prevents tabnabbing** & hides referrer info.                | `<a href="https://example.com" target="_blank" rel="noopener noreferrer">Safe Link</a>` | Must use with `target="_blank"` for security.                                          |
+| **`download`**                  | Forces the link to **download** a file instead of opening it. | `<a href="file.pdf" download>Download PDF</a>`                                          | Works for same-origin or properly configured cross-origin files.                       |
+| **`mailto:`**                   | Opens the user’s **email client**.                            | `<a href="mailto:hello@example.com">Email Us</a>`                                       | Can include subject: `mailto:hello@example.com?subject=Hi`.                            |
+| **`tel:`**                      | Opens the **phone dialer** on supported devices.              | `<a href="tel:+1234567890">Call Us</a>`                                                 | Commonly used in **mobile-friendly sites**.                                            |
+| **`title`**                     | Adds a **tooltip** on hover.                                  | `<a href="about.html" title="Learn more about us">About</a>`                            | Improves accessibility & UX.                                                           |
+| **`accesskey`**                 | Defines a **keyboard shortcut** for the link.                 | `<a href="/home" accesskey="h">Home</a>`                                                | Rarely used; use carefully for accessibility.                                          |
+| **`tabindex`**                  | Sets **tab order** for keyboard navigation.                   | `<a href="/contact" tabindex="2">Contact</a>`                                           | Helps with **keyboard navigation**.                                                    |
 
 ---
 
 ## HTML Images `<img>`
 
-- used to `embed an image`
-- `src` attribute, contains the `path of image file`
-- `alt` specify `descriptive text`
-  - `screen readers read out` the alt text
-  - `on image loading error`, alt text displays
+| **Attribute**        | **Purpose**                                                 | **Example**                                                                              | **Notes / Usage**                                                              |
+| -------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **`src`**            | Specifies the **image source** (URL or path).               | `<img src="images/photo.jpg" alt="Profile Photo">`                                       | Can be **relative** (`/img/pic.png`) or **absolute** (`https://...`).          |
+| **`alt`**            | Provides **alternative text** for the image.                | `<img src="logo.png" alt="Company Logo">`                                                | **Crucial for accessibility** & shown when image fails to load. Helps **SEO**. |
+| **`title`**          | Adds a **tooltip** when hovering over the image.            | `<img src="cat.jpg" alt="Cat" title="Cute Cat">`                                         | Optional, improves UX but not a replacement for `alt`.                         |
+| **`width`**          | Sets the **image width** (in px or %).                      | `<img src="img.jpg" width="200">`                                                        | Better to use **CSS** for responsiveness instead of inline width.              |
+| **`height`**         | Sets the **image height**.                                  | `<img src="img.jpg" height="150">`                                                       | Keep **aspect ratio** consistent to avoid distortion.                          |
+| **`loading`**        | Enables **lazy loading** of images.                         | `<img src="big.jpg" alt="Big Image" loading="lazy">`                                     | `lazy` delays loading off-screen images → **faster page speed**.               |
+| **`srcset`**         | Provides **multiple image versions** for different devices. | `<img src="small.jpg" srcset="medium.jpg 768w, large.jpg 1200w" alt="Responsive Image">` | **Responsive images**: browser picks the best size.                            |
+| **`sizes`**          | Works with `srcset` to define image display size.           | `<img src="small.jpg" srcset="medium.jpg 768w" sizes="(max-width: 768px) 100vw, 50vw">`  | Helps the browser **choose optimal image** for the screen size.                |
+| **`crossorigin`**    | Handles **cross-origin image requests**.                    | `<img src="https://cdn.com/img.jpg" crossorigin="anonymous">`                            | Needed for **CORS-enabled images** (like for canvas editing).                  |
+| **`usemap`**         | Links image to a **map** for clickable regions.             | `<img src="map.jpg" usemap="#worldmap">`                                                 | Used with `<map>` + `<area>` for interactive images.                           |
+| **`decoding`**       | Hints how the browser should **decode the image**.          | `<img src="photo.jpg" decoding="async">`                                                 | `async` improves perceived performance by not blocking rendering.              |
+| **`referrerpolicy`** | Controls **referrer info** sent with image requests.        | `<img src="image.jpg" referrerpolicy="no-referrer">`                                     | Enhances **privacy/security**.                                                 |
 
 ### Image Maps
 
@@ -781,8 +295,6 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 </script>
 ```
 
----
-
 ### HTML `<picture>` Element
 
 - allows to display `different pictures for different devices or screen sizes`.
@@ -798,8 +310,6 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 `Note:`
 
 - Always specify an `<img>` element as the `last child` element of the `<picture>` element for `fallback`.
-
----
 
 ### HTML Favicon
 
@@ -890,624 +400,124 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 - consists of table cells inside `rows and columns`
 
-| Element      | Description                                                               |
-| ------------ | ------------------------------------------------------------------------- |
-| `<table>`    | Defines a table                                                           |
-| `<th>`       | Defines a header cell in a table                                          |
-| `<tr>`       | Defines a row in a table                                                  |
-| `<td>`       | Defines a cell in a table                                                 |
-| `<caption>`  | Defines a table caption                                                   |
-| `<colgroup>` | Specifies a group of one or more columns in a table for formatting        |
-| `<col>`      | Specifies column properties for each column within a `<colgroup>` element |
-| `<thead>`    | Groups the header content in a table                                      |
-| `<tbody>`    | Groups the body content in a table                                        |
-| `<tfoot>`    | Groups the footer content in a table                                      |
-
-- `colspan` : To make a `cell span over multiple columns`
-- `rowspan` : To make a `cell span over multiple rows`
+| **Tag / Attribute**    | **Purpose**                                 | **Example**                              | **Notes / Usage**                                                              |
+| ---------------------- | ------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------ |
+| **`<table>`**          | Wraps the entire table.                     | `<table>...</table>`                     | Always the outermost container for a table.                                    |
+| **`<tr>`**             | Defines a **table row**.                    | `<tr><td>Cell</td></tr>`                 | Must be inside `<table>`.                                                      |
+| **`<td>`**             | Defines a **table data cell**.              | `<td>Data</td>`                          | Default cell element for table content.                                        |
+| **`<th>`**             | Defines a **table header cell**.            | `<th>Heading</th>`                       | By default **bold + centered**. Use `scope` for accessibility.                 |
+| **`<thead>`**          | Groups **header rows**.                     | `<thead><tr><th>Col1</th></tr></thead>`  | Useful for separating table headings (especially for accessibility & styling). |
+| **`<tbody>`**          | Groups **body rows**.                       | `<tbody><tr><td>Data</td></tr></tbody>`  | Helps organize table structure.                                                |
+| **`<tfoot>`**          | Groups **footer rows**.                     | `<tfoot><tr><td>Total</td></tr></tfoot>` | Useful for summaries (e.g., totals in reports).                                |
+| **`colspan`**          | **Merges columns** within a cell.           | `<td colspan="2">Merged Cell</td>`       | Used when one cell spans multiple columns.                                     |
+| **`rowspan`**          | **Merges rows** within a cell.              | `<td rowspan="2">Merged Cell</td>`       | Used when one cell spans multiple rows.                                        |
+| **`caption`**          | Adds a **title/caption** to a table.        | `<caption>Monthly Report</caption>`      | Should be the first child of `<table>`. Improves accessibility.                |
+| **`scope`** (th)       | Defines **cell scope** for accessibility.   | `<th scope="col">Name</th>`              | Values: `col`, `row`, `colgroup`, `rowgroup`. Helps screen readers.            |
+| **`border`**           | Sets a **border** around the table (HTML4). | `<table border="1">`                     | Deprecated → use CSS `border`.                                                 |
+| **`width` / `height`** | Sets table/cell size (HTML4).               | `<table width="100%">`                   | Deprecated → use CSS instead.                                                  |
+| **`align`**            | Aligns table or cell content.               | `<td align="center">Text</td>`           | Deprecated → use CSS `text-align`.                                             |
 
 ```html
-<table style="width:100%;">
+<table>
   <caption>
-    Monthly savings
+    Student Scores
   </caption>
-  <colgroup>
-    <col span="2" style="background-color: blue" />
-    <!-- to style columns in the middle of a table, insert a "empty" <col> element -->
-    <!-- <col span="2"> -->
-    <col span="1" style="background-color: green" />
-    <!-- hide last column -->
-    <!-- <col span="1" style="visibility: collapse"> -->
-  </colgroup>
   <thead>
     <tr>
-      <th colspan="2">Name</th>
-      <th>Age</th>
+      <th scope="col">Name</th>
+      <th scope="col">Score</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
+      <td>John</td>
+      <td>85</td>
     </tr>
     <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td rowspan="2">94</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
+      <td>Mary</td>
+      <td>92</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Average: 88.5</td>
+    </tr>
+  </tfoot>
 </table>
 ```
 
-<table style="width:100%;">
-  <caption>Monthly savings</caption>
-  <colgroup>
-    <col span="2" style="background-color: blue">
-    <!-- <col span="2"> -->
-    <col span="1" style="background-color: green">
-    <!-- <col span="1" style="visibility: collapse"> -->
-  </colgroup>
+<table>
+  <caption>Student Scores</caption>
   <thead>
-   <tr>
-    <th colspan="2">Name</th>
-    <th>Age</th>
-   </tr>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Score</th>
+    </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-      <td>Eve</td>
-    <td>Jackson</td>
-    <td rowspan="2">94</td>
-  </tr>
-  <tr>
-      <td>Eve</td>
-    <td>Jackson</td>
-  </tr>
+    <tr>
+      <td>John</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>Mary</td>
+      <td>92</td>
+    </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Average: 88.5</td>
+    </tr>
+  </tfoot>
 </table>
 
 ---
 
-## HTML Forms
-
-- used to `collect user input`
-
-### `type="text"`
-
-- defines a `single-line text input` field
-
-### `type="email"`
-
-- used for input fields that should contain an e-mail address
-
-### `type="password"`
-
-- defines a `password field`
-
-### `type="hidden"`
-
-- defines a `hidden input field` (not visible to a user)
-
-- lets web developers `include data that cannot be seen or modified by users` when a form is submitted
-
-### `type="number"`
-
-- defines a `numeric input field`
-
-### `type="submit"`
-
-- defines a button for `submitting form data to a form-handler`
-- `form-handler` is typically a `server page with a script for processing input data`
-- `form-handler` is specified in the `form's action` attribute
-
-### `type="reset"`
-
-- will `reset all form values` to their default values
-
-```html
-<fieldset>
-  <legend>Personalia:</legend>
-  <form action="/action_page.php">
-    <label for="fname">First name:</label><br />
-    <input type="text" id="fname" name="fname" /><br />
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" /><br />
-    <label for="password">Password:</label><br />
-    <input type="password" id="password" name="password" /><br />
-    <label for="quantity">Quantity (between 1 and 5):</label><br />
-    <input
-      type="number"
-      id="quantity"
-      name="quantity"
-      min="1"
-      max="5"
-    /><br /><br />
-    <input type="hidden" id="custId" name="custId" value="3487" />
-    <input type="submit" value="Submit" />
-    <input type="reset" />
-  </form>
-</fieldset>
-```
-
-<fieldset>
-<legend>Personalia:</legend>
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br />
-  <input type="text" id="fname" name="fname" /><br />
-  <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" /><br />
-  <label for="password">Password:</label><br />
-  <input type="password" id="password" name="password" /><br />
-  <label for="level">Level (between 1 and 5):</label><br/>
-  <input type="number" id="level" name="level" min="1" max="5"><br/><br/>
-  <input type="hidden" id="custId" name="custId" value="3487" />
-  <input type="submit" value="Submit" />
-  <input type="reset" />
-</form>
-</fieldset>
-
-- `<fieldset>` tag is used to group related elements in a form.
-- `<fieldset>` tag draws a box around the related elements
-- `<legend>` tag is used to define a caption for the `<fieldset>` element.
-
-### `type="radio"`
-
-- defines a `radio button`
-- user will select `ONLY ONE` of a limited number of choices
-- `name` for all radio input must be `same`
-
-```html
-<p>Choose your favorite Web language:</p>
-
-<form>
-  <input type="radio" id="html" name="fav_language" value="HTML" />
-  <label for="html">HTML</label><br />
-  <input type="radio" id="css" name="fav_language" value="CSS" />
-  <label for="css">CSS</label><br />
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
-  <label for="javascript">JavaScript</label>
-</form>
-```
-
-<p>Choose your favorite Web language:</p>
-
-<form>
-  <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-  <label for="javascript">JavaScript</label>
-</form>
-
-### `type="checkbox"`
-
-- user select `ZERO or MORE options` of a limited number of choices
-
-```html
-<form>
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-  <label for="vehicle1"> I have a bike</label><br />
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-  <label for="vehicle2"> I have a car</label><br />
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-  <label for="vehicle3"> I have a boat</label>
-</form>
-```
-
-<form>
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label>
-</form>
-
-### `type="file"`
-
-- defines a `file-select field` and a "Browse" button for `file uploads`.
-
-```html
-<form>
-  <label for="myfile">Select a file:</label>
-  <input type="file" id="myfile" name="myfile" />
-</form>
-```
-
-<form>
-  <label for="myfile">Select a file:</label>
-  <input type="file" id="myfile" name="myfile">
-</form>
-
-### `type="range"`
-
-- control for entering a number whose exact value is not important (like a `slider control`)
-
-```html
-<form>
-  <label for="vol">Volume (between 0 and 50):</label>
-  <input type="range" id="vol" name="vol" min="0" max="50" />
-</form>
-```
-
-<form>
-  <label for="vol">Volume (between 0 and 50):</label>
-  <input type="range" id="vol" name="vol" min="0" max="50">
-</form>
-
-### `type="search"`
-
-- used for `search fields`
-
-```html
-<form>
-  <label for="gsearch">Search Google:</label>
-  <input type="search" id="gsearch" name="gsearch" />
-</form>
-```
-
-<form>
-  <label for="gsearch">Search Google:</label>
-  <input type="search" id="gsearch" name="gsearch">
-</form>
-
-### `type="tel"`
-
-- used for input fields that should contain a `telephone number`
-
-```html
-<form>
-  <label for="phone">Enter your phone number:</label>
-  <input
-    type="tel"
-    id="phone"
-    name="phone"
-    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-  />
-</form>
-```
-
-<form>
-  <label for="phone">Enter your phone number:</label>
-  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-</form>
-
-### `type="date"`
-
-- used for input fields that should contain a `date`.
-
-```html
-<form>
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday" />
-</form>
-```
-
-<form>
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
-</form>
-
-### `type="time"`
-
-- used for input fields that should contain a `time`.
-
-```html
-<form>
-  <label for="appt">Select a time:</label>
-  <input type="time" id="appt" name="appt" />
-</form>
-```
-
-<form>
-  <label for="appt">Select a time:</label>
-  <input type="time" id="appt" name="appt">
-</form>
-
-### `type="button"`
-
-- defines a `button`
-
-```html
-<input type="button" onclick="alert('Hello World!')" value="Click Me!" />
-```
-
-<input type="button" onclick="alert('Hello World!')" value="Click Me!">
-
-### `type="color"`
-
-- used to `select color`
-
-```html
-<form>
-  <label for="favcolor">Select your favorite color:</label>
-  <input type="color" id="favcolor" name="favcolor" />
-</form>
-```
-
-<form>
-  <label for="favcolor">Select your favorite color:</label>
-  <input type="color" id="favcolor" name="favcolor">
-</form>
-
-### `type="image"`
-
-- defines an `image as a submit button`
-
-```html
-<form>
-  <input
-    type="image"
-    src="greenArrow.png"
-    alt="Submit"
-    width="48"
-    height="48"
-  />
-</form>
-```
-
-<form>
-<input type="image" src="./images/greenArrow.png" alt="Submit" width="48" height="48">
-</form>
-
-### `type="url"`
-
-- used for input fields that should contain a `URL address`
-
-```html
-<form>
-  <label for="homepage">Add your homepage:</label>
-  <input type="url" id="homepage" name="homepage" />
-</form>
-```
-
-<form>
-  <label for="homepage">Add your homepage:</label>
-  <input type="url" id="homepage" name="homepage">
-</form>
-
----
-
-## HTML `<select>` Tag
-
-- Create a `drop-down list`
-
-- `<optgroup>` tag is used to `group related options` in a `<select>` element
-
-- `<option>` tag defines an option in a select list.
-
-```html
-<label for="cars">Choose a car:</label>
-<select name="cars" id="cars">
-  <optgroup label="Swedish Cars">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-  </optgroup>
-  <optgroup label="German Cars">
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </optgroup>
-</select>
-```
-
-<label for="cars">Choose a car:</label>
-<select name="cars" id="cars">
-
- <option hidden value="">---Select---</option>
-  <optgroup label="Swedish Cars">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-  </optgroup>
-  <optgroup label="German Cars">
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </optgroup>
-</select>
-
----
-
-## HTML Input Attributes
-
-### `The value Attribute`
-
-- specifies a `value for an input field`
-
-### `The readonly Attribute`
-
-- specifies that an input field is read-only( `cannot be modified` )
-
-### `The disabled Attribute`
-
-- specifies that an input field should be `disabled`
-- it is `unusable` and `un-clickable`
-
-```html
-<form>
-  <label for="fname">First name:</label><br />
-  <input type="text" id="fname" name="fname" value="John" readonly /><br />
-  <label for="lname">Last name:</label><br />
-  <input type="text" id="lname" name="lname" value="Doe" disabled /><br />
-</form>
-```
-
-<form>
-  <label for="fname">First name:</label><br />
-  <input type="text" id="fname" name="fname" value="John" readonly /><br/>
-  <label for="lname">Last name:</label><br />
-  <input type="text" id="lname" name="lname" value="Doe" disabled /><br/><br/>
-</form>
-
-### `The size Attribute`
-
-- specifies the `visible width`, in characters, of an input field
-- The default value for size is `20`.
-- `Note`: works with : `text`, `search`, `tel`, `url`, `email`, and `password`.
-
-### `The maxlength Attribute`
-
-- specifies the `maximum number of characters allowed` in an input field
-
-### `The min and max Attributes`
-
-- specify the `minimum and maximum values` for an input field
-- work with : `number`, `range`, `date`, `datetime-local`, `month`, `time` and `week`
-
-### `The step Attribute`
-
-- specifies the `legal number intervals` for an input field.
-- eg: if step="3", legal numbers could be -3, 0, 3, 6, etc.
-
-```html
-<form>
-  <label for="pin">PIN:</label><br />
-  <input type="text" id="pin" name="pin" maxlength="6" size="15" />
-  <label for="datemax">Enter a date before 1980-01-01:</label>
-  <input type="date" id="datemax" name="datemax" max="1979-12-31" /><br /><br />
-
-  <label for="datemin">Enter a date after 2000-01-01:</label>
-  <input type="date" id="datemin" name="datemin" min="2000-01-02" /><br /><br />
-
-  <label for="quantity">Quantity (between 0 and 10):</label>
-  <input type="number" id="quantity" name="quantity" min="0" max="5" step="2" />
-</form>
-```
-
-<form>
-<label for="pin">PIN:</label><br />
-<input type="text" id="pin" name="pin" maxlength="6" size="15" /><br />
-<label for="datemax">Enter a date before 1980-01-01:</label><br />
-<input type="date" id="datemax" name="datemax" max="1979-12-31" /><br />
-<label for="datemin">Enter a date after 2000-01-01:</label><br />
-<input type="date" id="datemin" name="datemin" min="2000-01-02" /><br />
-<label for="quantity">Quantity (between 0 and 10):</label><br />
-<input type="number" id="quantity" name="quantity" min="0" max="10" step="2" />
-
-</form>
-
-### `The autofocus Attribute`
-
-- specifies that an input field should `automatically get focus` when the page loads
-
-### `The autocomplete Attribute`
-
-- specifies whether a form or an `input field should have autocomplete on or off`
-
-### `The required Attribute`
-
-- specifies that an input field `must be filled out before submitting` the form
-- works with: `text`, `search`, `url`, `tel`, `email`, `password`, `date pickers`, `number`, `checkbox`, `radio`, and `file`
-
-### `The placeholder Attribute`
-
-- specifies a `short hint` that describes the expected value of an input field
-
-```html
-<form>
-  <label for="fname">First name:</label><br />
-  <input
-    placeholder="name"
-    type="text"
-    id="fname"
-    name="fname"
-    autofocus
-    autocomplete="off"
-    required
-  /><br />
-</form>
-```
-
-<form>
-  <label for="fname">First name:</label><br />
-  <input
-    type="text"
-    id="fname"
-    name="fname"
-    autofocus
-    autocomplete="off"
-    required
-  /><br />
-</form>
-
-### `The multiple Attribute`
-
-- specifies that the user is `allowed to enter more than one value` in an input field
-- works with : `email`, and `file`
-
-```html
-<form>
-  <label for="files">Select files:</label>
-  <input type="file" id="files" name="files" multiple />
-</form>
-```
-
-<form>
-  <label for="files">Select files:</label>
-  <input type="file" id="files" name="files" multiple>
-</form>
-
-### `The pattern Attribute`
-
-- specifies a regular expression that the input field's value is checked against, when the form is submitted.
-- works with : `text`, `date`, `search`, `url`, `tel`, `email`, and `password`.
-
-```html
-<form>
-  <label for="country_code">Country code:</label>
-  <input
-    type="text"
-    id="country_code"
-    name="country_code"
-    pattern="[A-Za-z]{3}"
-    title="Three letter country code"
-  />
-</form>
-```
-
----
-
-## HTML form Attributes
-
-### `action Attribute`
-
-- formaction attribute specifies the `URL of the file that will process the input` when the form is submitted
-
-### `method Attribute`
-
-- defines the `HTTP method` for sending form-data to the action URL
-- eg `method="get/post"`
-
-### `enctype Attribute`
-
-- specifies how the `form-data should be encoded` when submitted (only for forms with `method="post"`).
-- works with :
-  - `application/x-www-form-urlencoded` : Default. All characters will be encoded before sent.
-  - `multipart/form-data` : This value is necessary if the user will upload a file through the form.
-  - `text/plain` : Sends data without any encoding at all. Not recommended.
-
-```html
-<form
-  action="/action_page_binary.asp"
-  method="post"
-  enctype="multipart/form-data"
->
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" /><br /><br />
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" /><br /><br />
-  <input type="submit" value="Submit" />
-</form>
-```
+## HTML Form Tags
+
+| **Tag**          | **Purpose**                              | **How It Displays**                                                                                                                  | **Example**                                                                         | **Notes / Usage**                                          |
+| ---------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **`<form>`**     | Wraps all form controls.                 | _(No visible UI — just a container)_                                                                                                 | `<form action="/submit" method="POST">...</form>`                                   | Must include `action` (URL) & `method` (`GET`/`POST`).     |
+| **`<input>`**    | Single-line input field (various types). | <input type="text" placeholder="Sample input">                                                                                       | `<input type="text" name="username">`                                               | The most versatile tag. `type` defines its behavior.       |
+| **`<textarea>`** | Multi-line text input.                   | <textarea rows="3" cols="25">Sample text</textarea>                                                                                  | `<textarea rows="4" cols="30"></textarea>`                                          | For longer text inputs (e.g., comments).                   |
+| **`<select>`**   | Dropdown menu (single or multiple).      | <select><option>India</option><option>USA</option></select>                                                                          | `<select><option>India</option></select>`                                           | Use `multiple` for multi-select.                           |
+| **`<option>`**   | An option inside `<select>`.             | <select><option selected>India</option><option>USA</option></select>                                                                 | `<option value="IN">India</option>`                                                 | Use `selected` to pre-select.                              |
+| **`<optgroup>`** | Groups options in a dropdown.            | <select><optgroup label="Asia"><option>India</option></optgroup><optgroup label="Europe"><option>France</option></optgroup></select> | `<optgroup label="Asia"><option>India</option></optgroup>`                          | Helps categorize dropdown values.                          |
+| **`<button>`**   | Clickable button.                        | <button type="submit">Submit</button>                                                                                                | `<button type="submit">Submit</button>`                                             | Types: `submit`, `reset`, `button`.                        |
+| **`<label>`**    | Labels form controls.                    | <label for="email">Email:</label> <input id="email" type="email">                                                                    | `<label for="email">Email:</label>`                                                 | Clicking it focuses the input with matching `id`.          |
+| **`<fieldset>`** | Groups related fields.                   | <fieldset><legend>Login</legend><input type="text" placeholder="Username"></fieldset>                                                | `<fieldset><legend>Login</legend>...</fieldset>`                                    | Improves structure & accessibility.                        |
+| **`<legend>`**   | Title for a `<fieldset>`.                | <fieldset><legend>Personal Info</legend><input type="text" placeholder="Name"></fieldset>                                            | `<legend>Personal Info</legend>`                                                    | Gives context to grouped inputs.                           |
+| **`<datalist>`** | Provides auto-suggestions.               | <input list="browsers"><datalist id="browsers"><option>Chrome</option><option>Firefox</option></datalist>                            | `<input list="browsers"><datalist id="browsers"><option>Chrome</option></datalist>` | Works with `<input list="">`.                              |
+| **`<output>`**   | Displays calculated results.             | <output name="result">0</output>                                                                                                     | `<output name="result">0</output>`                                                  | Can dynamically show results (e.g., JS-calculated values). |
+| **`<progress>`** | Shows task progress.                     | <progress value="70" max="100"></progress>                                                                                           | `<progress value="70" max="100"></progress>`                                        | For indicating progress in tasks.                          |
+| **`<meter>`**    | Displays a measurement within a range.   | <meter value="0.6" min="0" max="1"></meter>                                                                                          | `<meter value="0.6" min="0" max="1"></meter>`                                       | For displaying scores or capacity levels.                  |
+
+## HTML Form Attributes
+
+| **Attribute**      | **Purpose**                                  | **How It Displays**                                                                                       | **Example**                                                                         | **Notes / Usage**                                                               |
+| ------------------ | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **`action`**       | URL where form data is sent.                 | _(No visual effect)_                                                                                      | `<form action="/submit">`                                                           | Can be **relative** (`/submit`) or **absolute** (`https://...`).                |
+| **`method`**       | HTTP method for form submission.             | _(No visual effect)_                                                                                      | `<form method="POST">`                                                              | `GET` → appends data in URL (**visible**). `POST` → sends in body (**secure**). |
+| **`enctype`**      | Encoding type for submitted data.            | _(No visual effect)_                                                                                      | `<form enctype="multipart/form-data">`                                              | Required for **file uploads**. Default: `application/x-www-form-urlencoded`.    |
+| **`target`**       | Where to open the response.                  | _(No visual effect)_                                                                                      | `<form target="_blank">`                                                            | `_self` (default), `_blank` (new tab), `_parent`, `_top`.                       |
+| **`name`**         | Key name for form data (used in submission). | <input type="text" name="email" placeholder="Email">                                                      | `<input type="text" name="email">`                                                  | **Mandatory** for input to be included in submission.                           |
+| **`id`**           | Unique identifier for elements.              | <input id="username" placeholder="Username">                                                              | `<input id="username">`                                                             | Used with `<label for="id">` & JS access.                                       |
+| **`value`**        | Default/pre-filled value.                    | <input type="text" value="John">                                                                          | `<input type="text" value="John">`                                                  | Sets initial input value.                                                       |
+| **`placeholder`**  | Hint text inside the input field.            | <input type="text" placeholder="Enter name">                                                              | `<input type="text" placeholder="Enter name">`                                      | **Not a replacement for labels**.                                               |
+| **`required`**     | Makes a field mandatory.                     | <input type="email" placeholder="Email" required>                                                         | `<input type="email" required>`                                                     | Prevents form submission if empty.                                              |
+| **`readonly`**     | Makes input non-editable (still submits).    | <input type="text" value="123" readonly>                                                                  | `<input type="text" value="123" readonly>`                                          | Unlike `disabled`, value **is submitted**.                                      |
+| **`disabled`**     | Disables input (cannot edit/submit).         | <input type="text" value="Disabled" disabled>                                                             | `<input type="text" disabled>`                                                      | Value **is not sent** to server.                                                |
+| **`multiple`**     | Allows multiple selections.                  | <input type="file" multiple>                                                                              | `<input type="file" multiple>`                                                      | Works for file inputs & multi-select dropdowns.                                 |
+| **`checked`**      | Pre-checks a checkbox/radio button.          | <input type="checkbox" checked>                                                                           | `<input type="checkbox" checked>`                                                   | Used for `checkbox` & `radio`.                                                  |
+| **`selected`**     | Pre-selects an option in dropdown.           | <select><option selected>India</option><option>USA</option></select>                                      | `<option value="IN" selected>India</option>`                                        | Used inside `<select>`.                                                         |
+| **`autocomplete`** | Enables/disables browser auto-fill.          | _(No visual effect)_                                                                                      | `<form autocomplete="off">`                                                         | Can be `on` or `off`.                                                           |
+| **`min` / `max`**  | Sets numeric or date limits.                 | <input type="number" min="1" max="10" value="5">                                                          | `<input type="number" min="1" max="10">`                                            | Works with `number`, `date`, `range`.                                           |
+| **`step`**         | Defines input step intervals.                | <input type="number" step="0.5" value="2.5">                                                              | `<input type="number" step="0.5">`                                                  | Useful for precise numeric/range inputs.                                        |
+| **`pattern`**      | Adds **regex validation**.                   | <input type="text" pattern="[A-Za-z]{3,}" placeholder="Only letters">                                     | `<input type="text" pattern="[A-Za-z]{3,}">`                                        | Ensures input matches the regex pattern.                                        |
+| **`maxlength`**    | Limits max characters in input.              | <input type="text" maxlength="10" placeholder="Max 10">                                                   | `<input type="text" maxlength="10">`                                                | Prevents extra characters.                                                      |
+| **`size`**         | Visible width of input in characters.        | <input type="text" size="30" value="Wide Field">                                                          | `<input type="text" size="30">`                                                     | **Only visual**; doesn’t restrict length.                                       |
+| **`list`**         | Binds `<input>` to `<datalist>`.             | <input list="browsers"><datalist id="browsers"><option>Chrome</option><option>Firefox</option></datalist> | `<input list="browsers"><datalist id="browsers"><option>Chrome</option></datalist>` | Provides auto-suggestions.                                                      |
+| **`novalidate`**   | Disables built-in HTML5 validation.          | _(No visual effect)_                                                                                      | `<form novalidate>`                                                                 | Lets JS handle validation manually.                                             |
 
 ---
 
@@ -1525,83 +535,13 @@ For 60 years, WWF has worked to help people and nature thrive. As the world's le
 
 ## HTML Computer Code Elements
 
-### `<kbd>`
-
-- used to define `keyboard input`
-
-```html
-<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
-```
-
-### _output :_
-
-<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
-
----
-
-### `<samp>`
-
-- used to define `sample output from a computer program`
-
-```html
-<p>Message from my computer:</p>
-<p>
-  <samp>File not found.<br />Press F1 to continue</samp>
-</p>
-```
-
-### _output :_
-
-<p>Message from my computer:</p>
-<p><samp>File not found.<br>Press F1 to continue</samp></p>
-
----
-
-### `<code>`
-
-- used to define a piece of `computer code`
-
-```html
-<code> x = 5; y = 6; z = x + y; </code>
-```
-
-### _output :_
-
-<code>
-x = 5;
-y = 6;
-z = x + y;
-</code>
-
-### `Notice`:
-
-- `does not preserve extra whitespace and line-breaks`
-- `to fix`,
-<pre>
-<code>
-x = 5;
-y = 6;
-z = x + y;
-</code>
-</pre>
-
----
-
-### `<var>`
-
-- used to define a `variable in programming` or in a `mathematical expression`
-- displayed in `italic`
-
-```html
-<p>
-  The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where
-  <var>b</var> is the base, and <var>h</var> is the vertical height.
-</p>
-```
-
-### _output :_
-
-<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+| **Tag**      | **Purpose**                                             | **How It Displays**                                 | **Example**                                        | **Notes / Usage**                                                 |
+| ------------ | ------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------- |
+| **`<code>`** | Represents **inline computer code**.                    | <p>Use <code>console.log()</code> in JS.</p>        | `<p>Use <code>console.log()</code> in JS.</p>`     | For **short inline code snippets**. Doesn’t preserve line breaks. |
+| **`<pre>`**  | Preformatted text (**preserves spaces & line breaks**). | <br><pre>function test() {<br> return 1;<br>}</pre> | `<pre>function test() {<br>  return 1;<br>}</pre>` | Best for **multiline code**. Often used with `<code>`.            |
+| **`<samp>`** | Represents **sample program output**.                   | <p>Output: <samp>Hello, World!</samp></p>           | `<p>Output: <samp>Hello, World!</samp></p>`        | Good for **program outputs** or results.                          |
+| **`<kbd>`**  | Represents **keyboard input**.                          | <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd></p>         | `<p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd></p>`      | Used for **keyboard shortcuts** or user input.                    |
+| **`<var>`**  | Represents **variables in programming**.                | <p>The variable <var>x</var> stores value.</p>      | `<p>The variable <var>x</var> stores value.</p>`   | Good for **variables** in math/code expressions.                  |
 
 ---
 
@@ -1653,26 +593,20 @@ z = x + y;
 
 ## HTML Multimedia
 
-- Only `MP3`, `WAV`, and `Ogg` audio are supported by the HTML standard
-- Only `MP4`, `WebM`, and `Ogg` video are supported by the HTML standard.
-- The `<source>` element allows you to `specify alternative video files` which the browser may choose from
-- The browser will use the `first recognized format`
-
-```html
-<audio controls autoplay muted>
-  <source src="horse.ogg" type="audio/ogg" />
-  <source src="horse.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-<video width="320" height="240" autoplay muted>
-  <source src="movie.mp4" type="video/mp4" />
-  <source src="movie.ogg" type="video/ogg" />
-  Your browser does not support the video tag.
-</video>
-```
-
-- [audio and video methods reference](https://www.w3schools.com/tags/ref_av_dom.asp)
+| **Tag**        | **Purpose**                          | **Example (Code)**                                                                               | **How It Displays**                                                                                                                                                        | **Notes / Usage**                                                                 |
+| -------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `<img>`        | Embeds an **image**.                 | `<img src="image.jpg" alt="Sample" width="200">`                                                 | <img src="https://fastly.picsum.photos/id/553/200/200.jpg?hmac=HSLKzqqoxnajv4KjLxYSjZokWcuCCiZLGdRPUoryhXk" alt="Sample" width="150">                                      | Always include **`alt`** for accessibility & SEO. Use `width`/`height` to resize. |
+| `<audio>`      | Embeds an **audio player**.          | `<audio controls><source src="sound.mp3" type="audio/mpeg"></audio>`                             | <audio controls><source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"></audio>                                                                          | Use `controls` for play/pause UI. Multiple `<source>` tags for fallback formats.  |
+| `<video>`      | Embeds a **video player**.           | `<video width="320" controls><source src="movie.mp4" type="video/mp4"></video>`                  | <video width="200" controls><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>                                                             | Add `controls` for play/pause. Use `poster` for thumbnail before play.            |
+| `<source>`     | Provides **media sources**.          | `<video controls><source src="movie.mp4" type="video/mp4"></video>`                              | _(No direct display — works inside `<video>`/`<audio>`)_                                                                                                                   | Add multiple formats (`mp4`, `ogg`, `webm`) for cross-browser compatibility.      |
+| `<track>`      | Adds **subtitles or captions**.      | `<video controls><track src="subs.vtt" kind="subtitles" srclang="en" label="English"></video>`   | _(No direct display — enables captions/subtitles)_                                                                                                                         | Works inside `<video>`. Use `.vtt` (WebVTT) files for subtitles.                  |
+| `<iframe>`     | Embeds another **webpage** or media. | `<iframe src="https://www.example.com" width="300" height="200"></iframe>`                       | <iframe src="https://www.example.com" width="200" height="100"></iframe>                                                                                                   | Used for embedding external content (maps, YouTube, etc.).                        |
+| `<embed>`      | Embeds **external content**.         | `<embed src="file.pdf" width="500" height="300">`                                                | _(Displays embedded file content)_                                                                                                                                         | Mostly for PDFs or plugins. Limited styling.                                      |
+| `<object>`     | Embeds external objects/files.       | `<object data="file.pdf" type="application/pdf" width="500" height="300"></object>`              | _(Displays embedded object)_                                                                                                                                               | Similar to `<embed>`. Can provide fallback content between tags.                  |
+| `<canvas>`     | Creates a **drawable area** (JS).    | `<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>`        | <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>                                                                                    | Used with **JavaScript** for graphics, games, charts, etc.                        |
+| `<svg>`        | Displays **vector graphics**.        | `<svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="black" fill="red"/></svg>` | <svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="black" fill="red"/></svg>                                                                             | Scalable graphics. Better than images for icons, shapes, animations.              |
+| `<figure>`     | Wraps media (image/video).           | `<figure><img src="image.jpg" alt="Sample"><figcaption>Caption</figcaption></figure>`            | <figure><img src="https://fastly.picsum.photos/id/553/200/200.jpg?hmac=HSLKzqqoxnajv4KjLxYSjZokWcuCCiZLGdRPUoryhXk" alt="Sample"><figcaption>Caption</figcaption></figure> | Groups media + caption for semantic meaning.                                      |
+| `<figcaption>` | Adds a **caption** to `<figure>`.    | `<figcaption>This is a caption</figcaption>`                                                     | <figcaption>This is a caption</figcaption>                                                                                                                                 | Should be placed **inside** `<figure>`.                                           |
 
 ---
 
@@ -1720,8 +654,6 @@ z = x + y;
   - `<p>`
   - `<form>`
 
----
-
 ### Inline Elements
 
 - `does not start on a new line`
@@ -1741,21 +673,20 @@ z = x + y;
 
 - Semantic elements `describes the purpose of content inside element` to both the `browser` and the `developer`.
 
-| Element        | Description                                                                                |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| `<article>`    | Defines independent, self-contained content                                                |
-| `<aside>`      | Defines content aside from the page content text                                           |
-| `<details>`    | Defines additional details that the user can view or hide text                             |
-| `<figure>`     | Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc |
-| `<figcaption>` | Defines a caption for a `<figure>` element text                                            |
-| `<footer>`     | Defines a footer for a document or section                                                 |
-| `<header>`     | Specifies a header for a document or section                                               |
-| `<main>`       | Specifies the main content of a document                                                   |
-| `<mark>`       | Defines marked/highlighted text                                                            |
-| `<nav>`        | Defines navigation links                                                                   |
-| `<section>`    | Defines a section in a document                                                            |
-| `<summary>`    | Defines a visible heading for a `<details>` element                                        |
-| `<time>`       | Defines a date/time                                                                        |
+| **Tag**        | **Purpose**                                  | **Example (Code)**                                                     | **How It Displays**                | **Notes / Usage**                                                 |                                                          |
+| -------------- | -------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------- |
+| `<header>`     | Represents the **header** of a page/section. | `<header><h1>Site Title</h1></header>`                                 | Block element (top section).       | Usually contains **logo, nav, or intro content**.                 |                                                          |
+| `<nav>`        | Defines **navigation links**.                | \`<nav><a href="/">Home</a>                                            | <a href="/about">About</a></nav>\` | Horizontal/vertical group of links.                               | For **menus & navigation bars**. Improves accessibility. |
+| `<section>`    | Groups **related content**.                  | `<section><h2>Features</h2><p>Details...</p></section>`                | Block section.                     | Ideal for **page sections** (e.g., Features, About).              |                                                          |
+| `<article>`    | Represents **self-contained content**.       | `<article><h2>Blog Post</h2><p>Content...</p></article>`               | Independent block of content.      | Can be **syndicated** (e.g., blog posts, news).                   |                                                          |
+| `<aside>`      | Represents **side content**.                 | `<aside>Related Links</aside>`                                         | Small side block.                  | Used for **ads, sidebars, related content**.                      |                                                          |
+| `<footer>`     | Represents the **footer** of page/section.   | `<footer>&copy; 2025 MySite</footer>`                                  | Block element (bottom section).    | Usually contains **copyright, links, contact info**.              |                                                          |
+| `<main>`       | Represents the **main content** of a page.   | `<main><h1>Welcome</h1><p>Main content here</p></main>`                | Block element.                     | Only **one `<main>`** per page.                                   |                                                          |
+| `<figure>`     | Groups **media + caption**.                  | `<figure><img src="img.jpg"><figcaption>Caption</figcaption></figure>` | Media block with caption.          | For **images, charts, code snippets** with a caption.             |                                                          |
+| `<figcaption>` | Adds a **caption** to `<figure>`.            | `<figcaption>Image Caption</figcaption>`                               | Text below or above figure.        | Must be inside `<figure>`.                                        |                                                          |
+| `<time>`       | Represents **dates/times**.                  | `<time datetime="2025-07-27">July 27, 2025</time>`                     | Formatted date/time.               | Use `datetime` for machine-readable format (SEO & accessibility). |                                                          |
+| `<mark>`       | Highlights **important text**.               | `This is <mark>highlighted</mark>.`                                    | Text with a yellow background.     | Useful for **search highlights** or key points.                   |                                                          |
+| `<address>`    | Represents **contact info**.                 | `<address>123 Main St, City</address>`                                 | Block of italicized text.          | For **physical or email contact information**.                    |                                                          |
 
 - `Non-semantic elements` `tells nothing about its content`
 - eg. `<div>` and `<span>`
@@ -1784,7 +715,7 @@ z = x + y;
 
 ---
 
-### Non-breaking Space
+## Non-breaking Space
 
 - Another common use of the `non-breaking space` is to prevent that `browsers truncate spaces` in HTML pages.
 
@@ -1792,175 +723,35 @@ z = x + y;
 
 ---
 
-## Uniform Resource Locators
+## **✅ What is ARIA?**
 
-### HTML URL
-
-- its `web address`.
-
-- A URL can be `composed of words` (w3schools.com), or an Internet Protocol `(IP) address` (192.68.20.50).
-
-- `Web browsers request pages from web servers` by using a URL.
-
-![url](./images/url.webp)
+**ARIA (Accessible Rich Internet Applications)** is a set of **HTML attributes** that improve **accessibility** for users with disabilities (e.g., screen reader users).
+It helps **describe roles, states, and properties** of UI elements — especially when building **custom components** (modals, sliders, menus) that don’t have native semantics.
 
 ---
 
-### URL Encoding (encodeURIComponent())
+### **ARIA Components in Depth**
 
-- `converts non-ASCII characters into a format (ASCII character-set) that can be transmitted over the Internet`.
-- replaces non-ASCII characters with a `%` followed by `hexadecimal digits`.
-- URLs `cannot contain spaces`.it replaces a `space` with a plus `+` sign, or `%20`.
-- Your browser will encode input, according to the character-set used in your page.
-- The `default character-set` in HTML5 is `UTF-8`.
+| **Type**       | **Purpose**                                     | **Example**                                | **Notes / Usage**                                                   |
+| -------------- | ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------- |
+| **Roles**      | Define **what an element is** (its purpose).    | `<div role="button">Click</div>`           | Adds semantic meaning to non-semantic tags (`div`, `span`).         |
+| **States**     | Describe the **current state** of an element.   | `<button aria-pressed="true">On</button>`  | Used for toggles, expanded/collapsed states, active items.          |
+| **Properties** | Provide **extra information** about an element. | `<div aria-label="Main Navigation"></div>` | Adds labels, descriptions, relationships for better screen reading. |
 
 ---
 
-## ✅ What is ARIA?
+### **Common ARIA Attributes**
 
-> **ARIA** = Accessible Rich Internet Applications
-> It’s a set of **HTML attributes** that help **bridge the gap between complex UIs and assistive technologies** (like screen readers).
-
-### 🧠 Why ARIA Is Needed
-
-HTML alone is accessible — but modern UIs use custom components (modals, accordions, sliders) that:
-
-- Are **not semantic**
-- Don’t behave like native elements
-- Can’t be understood by screen readers
-
-**ARIA enhances these UIs with roles, states, and properties.**
-
-### 🔍 3 Core Categories of ARIA
-
-| Type         | Purpose                                     | Example                 |
-| ------------ | ------------------------------------------- | ----------------------- |
-| **Role**     | Describes **what an element is**            | `role="dialog"`         |
-| **Property** | Describes **static features** of an element | `aria-label="Close"`    |
-| **State**    | Describes **dynamic conditions**            | `aria-expanded="false"` |
-
-### 🧩 1. ARIA Roles – _What the Element Is_
-
-These roles help assistive tech **understand what kind of UI element** is being presented.
-
-| Role              | Use Case                 |
-| ----------------- | ------------------------ |
-| `button`          | Custom clickable buttons |
-| `dialog`          | Modals and overlays      |
-| `navigation`      | Navigation menus         |
-| `tab` / `tablist` | Tab interfaces           |
-| `tooltip`         | Tooltip content          |
-| `alert`           | Immediate notifications  |
-
-✅ Use roles when building **non-semantic custom components**
-
-```html
-<div role="button" tabindex="0">Click me</div>
-```
-
-### 🧷 2. ARIA Properties – _What the Element Has_
-
-Describe **relationships, labels, or descriptions**.
-
-| Property           | Meaning                                 | Example Use              |
-| ------------------ | --------------------------------------- | ------------------------ |
-| `aria-label`       | Custom label text (hidden visually)     | Icon-only buttons        |
-| `aria-labelledby`  | References another element as the label | Dialog title, forms      |
-| `aria-describedby` | Adds extra descriptive content          | Help text or tooltip     |
-| `aria-controls`    | Indicates controlled element            | Accordion toggle buttons |
-
-```html
-<button aria-label="Close modal">✖</button>
-```
-
-### 🔄 3. ARIA States – _What the Element Is Doing Now_
-
-Describe **interactive states** that change dynamically.
-
-| State           | Description                                   | Common Use            |
-| --------------- | --------------------------------------------- | --------------------- |
-| `aria-expanded` | Whether something is open/closed              | Dropdowns, accordions |
-| `aria-hidden`   | Whether element is hidden from screen readers | Offscreen modals      |
-| `aria-selected` | Selected state in lists or tabs               | Tabs, options         |
-| `aria-checked`  | Checkbox or radio state                       | Custom checkboxes     |
-| `aria-disabled` | Disabled/readonly state                       | Buttons or fields     |
-
-```html
-<button aria-expanded="false" aria-controls="dropdown1">Menu</button>
-```
-
-### 📣 4. ARIA Live Regions – _For Dynamic Content_
-
-Allows screen readers to **announce changes automatically**, even if the user didn’t trigger them.
-
-| Attribute               | Meaning                           | Use Case              |
-| ----------------------- | --------------------------------- | --------------------- |
-| `aria-live="polite"`    | Announce after idle time          | Success messages      |
-| `aria-live="assertive"` | Announce immediately (interrupts) | Errors, urgent alerts |
-| `aria-atomic="true"`    | Read the whole region             | Whole paragraphs      |
-
-```html
-<div aria-live="polite" id="status-msg">Saved successfully</div>
-```
-
-### 🧭 5. ARIA for Keyboard Navigation
-
-ARIA alone doesn’t provide interaction — you **must** implement keyboard behavior with JS.
-
-Pair ARIA with:
-
-- `tabindex` for focus
-- `keydown` events for keys like Enter, Space, Arrow keys
-
-Example for accordion:
-
-```html
-<div role="button" tabindex="0" aria-expanded="false" aria-controls="panel1">
-  Toggle Panel
-</div>
-<div id="panel1" hidden>Content</div>
-```
-
-### ✅ Best Practices (Do’s & Don’ts)
-
-#### ✅ Do:
-
-- Use ARIA when native HTML doesn't provide semantic meaning.
-- Test ARIA roles with screen readers (NVDA, VoiceOver).
-- Keep `aria-expanded`, `aria-checked`, etc., in **sync with UI state**.
-
-#### ❌ Don’t:
-
-- Don’t use ARIA to **replace semantic HTML** (use `<button>`, `<nav>`, etc.).
-- Don’t add `aria-hidden="true"` to visible, interactive content.
-- Don’t use ARIA if you don’t provide the **keyboard interaction** expected for it.
-
-### 🧪 Real-World ARIA Use Cases
-
-#### ✅ Modal Dialog:
-
-```html
-<div
-  role="dialog"
-  aria-labelledby="modalTitle"
-  aria-describedby="modalDesc"
-  aria-modal="true"
->
-  <h2 id="modalTitle">Confirm Action</h2>
-  <p id="modalDesc">Do you want to proceed?</p>
-</div>
-```
-
-#### ✅ Tabs:
-
-```html
-<div role="tablist">
-  <button role="tab" aria-selected="true" aria-controls="tab1">Tab 1</button>
-  <button role="tab" aria-selected="false" aria-controls="tab2">Tab 2</button>
-</div>
-<div id="tab1" role="tabpanel">Content 1</div>
-<div id="tab2" role="tabpanel" hidden>Content 2</div>
-```
+| **Attribute**      | **Purpose**                           | **Example**                                      |
+| ------------------ | ------------------------------------- | ------------------------------------------------ |
+| `role`             | Defines the element’s role.           | `<div role="dialog">`                            |
+| `aria-label`       | Adds a text label for assistive tech. | `<button aria-label="Close Menu">X</button>`     |
+| `aria-labelledby`  | Links to another element’s label.     | `<div aria-labelledby="title-id">`               |
+| `aria-describedby` | Links to additional descriptive text. | `<div aria-describedby="desc-id">`               |
+| `aria-hidden`      | Hides elements from screen readers.   | `<div aria-hidden="true">Hidden</div>`           |
+| `aria-checked`     | State for checkboxes/toggles.         | `<input type="checkbox" aria-checked="true">`    |
+| `aria-expanded`    | Indicates open/closed state.          | `<button aria-expanded="false">Menu</button>`    |
+| `aria-disabled`    | Marks an element as disabled.         | `<button aria-disabled="true">Disabled</button>` |
 
 ### 🔎 Tools to Test ARIA
 
@@ -1983,7 +774,7 @@ Example for accordion:
 
 ## **in-depth checklist of major points** to consider
 
-## ✅ 1. **Semantic HTML First**
+### ✅ 1. **Semantic HTML First**
 
 Use tags according to their **meaning**, not appearance.
 
@@ -2003,7 +794,7 @@ Use tags according to their **meaning**, not appearance.
 
 ---
 
-## ✅ 2. **Accessibility (a11y) Is Non-Negotiable**
+### ✅ 2. **Accessibility (a11y) Is Non-Negotiable**
 
 | Best Practice                        | Why It Matters                            |
 | ------------------------------------ | ----------------------------------------- |
@@ -2021,7 +812,7 @@ Use tags according to their **meaning**, not appearance.
 
 ---
 
-## ✅ 3. **Scalable Component Structure**
+### ✅ 3. **Scalable Component Structure**
 
 Follow **BEM** or **utility-first** (e.g., Tailwind) or component-based methodology (e.g., React, Vue):
 
@@ -2041,7 +832,7 @@ Use:
 
 ---
 
-## ✅ 4. **SEO Best Practices**
+### ✅ 4. **SEO Best Practices**
 
 | Element                     | Purpose                                |
 | --------------------------- | -------------------------------------- |
@@ -2059,7 +850,7 @@ Use:
 
 ---
 
-## ✅ 5. **Performance-Aware HTML**
+### ✅ 5. **Performance-Aware HTML**
 
 - Lazy-load images: `<img loading="lazy" />`
 - Use `<picture>` for responsive images
@@ -2069,7 +860,7 @@ Use:
 
 ---
 
-## ✅ 6. **Form Best Practices**
+### ✅ 6. **Form Best Practices**
 
 | Feature                         | Why Important                   |
 | ------------------------------- | ------------------------------- |
@@ -2085,7 +876,7 @@ Use:
 
 ---
 
-## ✅ 7. **Mobile-First & Responsive Design**
+### ✅ 7. **Mobile-First & Responsive Design**
 
 HTML must support responsive CSS:
 
@@ -2102,7 +893,7 @@ HTML must support responsive CSS:
 
 ---
 
-## ✅ 8. **Progressive Enhancement**
+### ✅ 8. **Progressive Enhancement**
 
 Build for the **baseline first**, then add enhancements:
 
@@ -2116,7 +907,7 @@ Build for the **baseline first**, then add enhancements:
 
 ---
 
-## ✅ 9. **HTML5 APIs Awareness**
+### ✅ 9. **HTML5 APIs Awareness**
 
 Use:
 
@@ -2127,7 +918,7 @@ Use:
 
 ---
 
-## ✅ 10. **Security Best Practices**
+### ✅ 10. **Security Best Practices**
 
 | Practice                                 | Why It Matters                      |
 | ---------------------------------------- | ----------------------------------- |
@@ -2142,7 +933,7 @@ Use:
 
 ---
 
-## ✅ 11. **Versioned & Maintainable Code**
+### ✅ 11. **Versioned & Maintainable Code**
 
 - Include comments only where it adds value
 - Version control via Git
@@ -2151,7 +942,7 @@ Use:
 
 ---
 
-## ✅ 12. **Integrate with CI/CD and Linters**
+### ✅ 12. **Integrate with CI/CD and Linters**
 
 - Use [HTMLHint](https://htmlhint.com/)
 - Add CI step to check broken links, accessibility (e.g., Lighthouse CLI, pa11y)
@@ -2159,7 +950,7 @@ Use:
 
 ---
 
-## ✅ Bonus: Professional Developer Mindset
+### ✅ Bonus: Professional Developer Mindset
 
 - **Think long term**: Will this HTML break in 2 years?
 - **Minimize assumptions**: Don’t assume everyone has JavaScript or fast internet
@@ -2169,7 +960,7 @@ Use:
 
 ---
 
-## 📁 Folder & File Organization (HTML-centric)
+### 📁 Folder & File Organization (HTML-centric)
 
 ```
 /project
@@ -2186,7 +977,7 @@ Use:
 
 ---
 
-## 🧠 Summary Checklist
+### 🧠 Summary Checklist
 
 - ✅ Use semantic tags
 - ✅ Optimize for accessibility (a11y)
