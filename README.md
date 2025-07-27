@@ -27,12 +27,12 @@
 - `<script>`: Includes or links to JavaScript files.
 - `<base>`: Specifies the base URL for relative links.
 
-### `Meta Tags`
+#### `Meta Tags`
 
 - provide `additional information` about the webpage.
 - `not visible to users` but are `critical for SEO`, `accessibility`, and `browser behavior.`
 
-### Commonly Used Meta Tags:
+#### Commonly Used Meta Tags:
 
 | **Meta Tag**                | **Description**                                                                | **Example**                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@
 | **Open Graph (OG)**         | Used for social media sharing (Facebook, LinkedIn).                            | `<meta property="og:title" content="Buy Premium Soy Candles">`               |
 | **Twitter Cards**           | Controls how links appear when shared on Twitter.                              | `<meta name="twitter:card" content="summary_large_image">`                   |
 
-### Link Tags
+#### Link Tags
 
 - Used to link external resources like CSS, icons, and prefetching resources.
 
@@ -65,7 +65,7 @@
 <link rel="preload" href="image.jpg" as="image" />
 ```
 
-### Script Tags
+#### Script Tags
 
 - Used to include JavaScript.
 
@@ -73,7 +73,7 @@
 <script src="script.js"></script>
 ```
 
-### Base Tag
+#### Base Tag
 
 - Specifies the base URL for relative links.
 
